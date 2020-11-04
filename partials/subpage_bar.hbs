@@ -1,0 +1,25 @@
+{{#unless overview_list}}
+
+{{#if parent_subpages}}
+
+{{#ancestry.parent.ancestry.children}}
+{{#if is_subpage}}
+{{#unless hidden}}
+<a class="page-nav-link" href="{{site_url}}/{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
+{{/unless}}
+{{/if}}
+{{/ancestry.parent.ancestry.children}}
+
+{{else}}
+
+{{#ancestry.children}}
+{{#if is_subpage}}
+{{#unless hidden}}
+<a class="page-nav-link" href="{{site_url}}/{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
+{{/unless}}
+{{/if}}
+{{/ancestry.children}}
+
+{{/if}}
+
+{{/unless}}

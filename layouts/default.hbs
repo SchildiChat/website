@@ -1,0 +1,12 @@
+---
+layout: base.hbs
+---
+
+{{> magic_site_title }}
+
+{{#unless hide_page_title}}
+{{> header_separator }}
+{{> page_title }}
+{{/unless}}
+
+{{{ contents }}}

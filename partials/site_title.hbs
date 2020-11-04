@@ -1,0 +1,24 @@
+<div class="site-title">
+
+<div class="site-nav-bar">
+
+{{#if needs_link_to_top}}
+
+{{#ifEquals ancestry.parent.title ancestry.root.site_title}}
+{{else}}
+<a href="/{{ancestry.parent.path}}" class="sub-site-nav-link">{{ancestry.parent.title}}</a>
+|
+{{/ifEquals}}
+<a href="/" class="top-site-nav-link">{{ancestry.root.site_title}}</a>
+
+{{else}}
+
+{{> top_subpage_bar }}
+
+{{/if}}
+
+</div>
+
+<div class="siteheader"><a class="siteheader" href="{{site_url}}/{{path}}">{{{ site_title }}}</a></div>
+
+</div>

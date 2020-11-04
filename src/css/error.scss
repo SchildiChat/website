@@ -1,0 +1,7 @@
+// TODO: @import is deprecated, better use @use - once our sass plugin supports it
+// https://sass-lang.com/documentation/at-rules/import
+@import 'base';
+
+.main {
+    text-align: center;
+}

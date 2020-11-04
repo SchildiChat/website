@@ -1,0 +1,13 @@
+{{#if main_page}}
+
+{{> site_title }}
+
+
+
+{{else}}
+
+{{#with ancestry.parent}}
+{{> magic_site_title }}
+{{/with}}
+
+{{/if}}

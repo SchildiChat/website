@@ -21,7 +21,7 @@ SCHILDI_REPO ?= ~/AndroidStudioProjects/SchildiChat-android
 SCHILDI_PICS_SRC_DIR := $(SCHILDI_REPO)/fastlane/metadata/android/en-US/images/phoneScreenshots/
 SCHILDI_PICS_NOPATH := 2_en-US.png 3_en-US.png 4_en-US.png
 SCHILDI_PICS_SRC := $(addprefix $(SCHILDI_PICS_SRC_DIR)/, $(SCHILDI_PICS_NOPATH))
-SCHILDI_PICS_TARGET_DIR := src/android
+SCHILDI_PICS_TARGET_DIR := src/android/img
 SCHILDI_PICS := $(addprefix $(SCHILDI_PICS_TARGET_DIR)/, $(SCHILDI_PICS_NOPATH))
 
 $(SCHILDI_PICS_TARGET_DIR)/%.png: $(SCHILDI_PICS_SRC_DIR)/%.png

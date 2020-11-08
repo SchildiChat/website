@@ -7,9 +7,7 @@
     "metalsmith-ancestry": "^1.5.2",
     "metalsmith-default-values": "^3.0.0",
     "metalsmith-headings-identifier": "0.0.11",
-    "metalsmith-nested": "^0.3.8"
-  },
-  "devDependencies": {
+    "metalsmith-nested": "^0.3.8",
     "jstransformer-handlebars": "^1.1.0",
     "metalsmith": "^2.3.0",
     "metalsmith-discover-helpers": "^0.1.1",

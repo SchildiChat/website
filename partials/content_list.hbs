@@ -11,15 +11,15 @@ Related links
 <ul>
 {{#if parent_subpages}}
 
-{{#ancestry.parent.ancestry.children}}
+{{#ancestry.children}}
 {{#if is_subpage}}
 {{#unless hidden}}
 <li>
-<a class="content-list-link" href="{{site_url}}/{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
+<a class="content-list-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
 </li>
 {{/unless}}
 {{/if}}
-{{/ancestry.parent.ancestry.children}}
+{{/ancestry.children}}
 
 {{else}}
 
@@ -27,7 +27,7 @@ Related links
 {{#if is_subpage}}
 {{#unless hidden}}
 <li>
-<a class="content-list-link" href="{{site_url}}/{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
+<a class="content-list-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
 </li>
 {{/unless}}
 {{/if}}

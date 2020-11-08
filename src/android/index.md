@@ -26,9 +26,9 @@ Compared to the Element app, SchildiChat features following changes:
 <!--
 <img alt="Screenshot" src="android/1_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
 -->
-<img alt="Screenshot" src="android/2_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
-<img alt="Screenshot" src="android/3_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
-<img alt="Screenshot" src="android/4_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
+<img alt="Screenshot" src="img/2_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
+<img alt="Screenshot" src="img/3_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
+<img alt="Screenshot" src="img/4_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
 </div>
 
 
@@ -40,14 +40,14 @@ Compared to the Element app, SchildiChat features following changes:
 The FOSS variant (without closed-source code) is available from the [official F-Droid repositories](https://f-droid.org/de/packages/de.spiritcroc.riotx/).
 However, this variant does not allow for push notifications, and thus might feature increased battery drain and a higher delay for delivering messages.
 
-If you prefer the variant that features push notifications, you can get it from the [SpiritCroc F-Droid repository](android/install_from_sc_fdroid).
+If you prefer the variant that features push notifications, you can get it from the [SpiritCroc F-Droid repository](install-from-sc_fdroid).
 
 
 ### Google Play Store
 
 At the moment, SchildiChat is not available from the Google Play Store in order to avoid legal complications caused by the US export regulations in regard to software with inbuilt encryption.
 
-You probably want to use the variant from the [SpiritCroc F-Droid repository](android/install_from_sc_fdroid) instead.
+You probably want to use the variant from the [SpiritCroc F-Droid repository](install-from-sc-fdroid) instead.
 In case SchildiChat becomes available in the Play Store in the future, this version should allow for an upgrade without the need to re-install the app.
 
 

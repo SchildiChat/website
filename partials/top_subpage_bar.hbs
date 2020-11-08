@@ -1,7 +1,7 @@
-{{#ancestry.root.ancestry.children}}
+{{#ancestry.children}}
 {{#if is_subpage}}
 {{#unless hidden}}
-<a class="site-nav-link" href="{{site_url}}/{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
+<a class="site-nav-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
 {{/unless}}
 {{/if}}
-{{/ancestry.root.ancestry.children}}
+{{/ancestry.children}}

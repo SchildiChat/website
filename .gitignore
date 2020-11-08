@@ -4,3 +4,4 @@ build
 build-layouts
 release.mk
 yarn.lock
+yarn-error.log

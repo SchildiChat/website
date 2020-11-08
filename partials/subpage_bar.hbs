@@ -5,7 +5,7 @@
 {{#ancestry.parent.ancestry.children}}
 {{#if is_subpage}}
 {{#unless hidden}}
-<a class="page-nav-link" href="{{site_url}}/{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
+<a class="page-nav-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
 {{/unless}}
 {{/if}}
 {{/ancestry.parent.ancestry.children}}
@@ -15,7 +15,7 @@
 {{#ancestry.children}}
 {{#if is_subpage}}
 {{#unless hidden}}
-<a class="page-nav-link" href="{{site_url}}/{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
+<a class="page-nav-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
 {{/unless}}
 {{/if}}
 {{/ancestry.children}}

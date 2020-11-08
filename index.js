@@ -4,20 +4,18 @@ const Metalsmith  = require('metalsmith'),
     layouts     = require('metalsmith-layouts');
 const sass = require('metalsmith-sass');
 const default_values = require('metalsmith-default-values');
-const permalinks = require('metalsmith-permalinks');
 const discoverPartials = require('metalsmith-discover-partials')
 const nested      = require('metalsmith-nested');
 const prefixoid = require('metalsmith-prefixoid');
 const links = require("metalsmith-relative-links");
 const ancestry = require("metalsmith-ancestry");
 const externalLinks = require("./lib/metalsmith-external-links");
-const autoexcludePermalinks = require("./lib/metalsmith-autoexclude-permalinks");
 const discoverHelpers = require('metalsmith-discover-helpers')
 const autoDefaults = require("./lib/metalsmith-auto-defaults");
 const php = require("./lib/metalsmith-php");
 const ignore = require('metalsmith-ignore');
 
-var site_url = "https://www.schildi.chat"
+var site_url = ""
 if (process.argv.length > 2) {
     site_url = process.argv[2];
 }
@@ -83,14 +81,6 @@ Metalsmith(__dirname)
         pattern: /\.hbs$/
     }))
 
-    // Needs to be run before permalinks()
-    .use(autoexcludePermalinks())
-
-    .use(permalinks({
-        duplicatesFail: true,
-        relative: false // don't duplicate files
-    }))
-
     // Ancestry allows access to parents and children. Links is a dependency.
     .use(links())
     .use(ancestry({
@@ -118,28 +108,28 @@ Metalsmith(__dirname)
 
     .use(prefixoid([{
             prefix: site_url,
-            convert_relatives: true,
+            convert_relatives: false,
             tag: 'link',
             attr: 'href'
         }, {
             prefix: site_url,
-            convert_relatives: true,
+            convert_relatives: false,
             tag: 'a',
             attr: 'href'
         }, {
             prefix: site_url,
-            convert_relatives: true,
+            convert_relatives: false,
             tag: 'object',
             attr: 'data'
         }, {
             prefix: site_url,
-            convert_relatives: true,
+            convert_relatives: false,
             tag: 'img',
             attr: 'src'
         }
     ]))
 
     // And tell Metalsmith to fire it all off.
-    .build(function(err, files) {
+    .build(function(err) {
         if (err) { throw err; }
     });

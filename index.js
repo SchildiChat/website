@@ -1,19 +1,18 @@
 // Get our requirements, installed by npm
-const Metalsmith  = require('metalsmith'),
-    markdown    = require('metalsmith-markdown'),
-    layouts     = require('metalsmith-layouts');
-const sass = require('metalsmith-sass');
-const default_values = require('metalsmith-default-values');
-const discoverPartials = require('metalsmith-discover-partials')
-const nested      = require('metalsmith-nested');
-const prefixoid = require('metalsmith-prefixoid');
-const links = require("metalsmith-relative-links");
-const ancestry = require("metalsmith-ancestry");
-const externalLinks = require("./lib/metalsmith-external-links");
-const discoverHelpers = require('metalsmith-discover-helpers')
-const autoDefaults = require("./lib/metalsmith-auto-defaults");
-const php = require("./lib/metalsmith-php");
+const Metalsmith = require('metalsmith');
 const ignore = require('metalsmith-ignore');
+const default_values = require('metalsmith-default-values');
+const discoverHelpers = require('metalsmith-discover-helpers');
+const nested = require('metalsmith-nested');
+const discoverPartials = require('metalsmith-discover-partials');
+const relativeLinks = require("metalsmith-relative-links");
+const ancestry = require("metalsmith-ancestry");
+const autoDefaults = require("./lib/metalsmith-auto-defaults");
+const inPlace = require('metalsmith-in-place');
+const layouts = require('metalsmith-layouts');
+const externalLinks = require("./lib/metalsmith-external-links");
+const prefixoid = require('metalsmith-prefixoid');
+const sass = require('metalsmith-sass');
 
 var site_url = ""
 if (process.argv.length > 2) {
@@ -48,26 +47,15 @@ Metalsmith(__dirname)
 
     .use(ignore(['**/.gitignore']))
 
-    .use(php())
-
     // frontmatter (thing in markdown before actual markdown) default values
     .use(default_values([
         {
-            pattern: '**/*.md',
-            defaults: site_default_params
-        },
-        {
-            pattern: '**/*.php',
+            pattern: '**/*.{html,md,hbs,md.hbs}',
             defaults: site_default_params
         }
     ]))
 
     .use(discoverHelpers())
-
-    // Use metalsmith-markdown to convert
-    // our source files' content from markdown
-    // to HTML fragments.
-    .use(markdown())
 
     // Allow nesting layouts // WARN: don't use layouts directory directly after that
     .use(nested({
@@ -82,13 +70,25 @@ Metalsmith(__dirname)
     }))
 
     // Ancestry allows access to parents and children. Links is a dependency.
-    .use(links())
+    .use(relativeLinks())
     .use(ancestry({
-        sortBy: ["order_id", "title"]
+        sortBy: ["order_id", "title"],
+        sortFilesFirst: "**/index.*",
+        match: "**/*.{html,md,hbs,md.hbs,fakechild}"
     }))
+    .use((files) => {
+        Object.keys(files).forEach((file) => {
+            var data = files[file];
+            if (data.ancestry) {
+                data.ancestry.path = '/' + data.ancestry.path.replace(/\.(md|hbs|md\.hbs)$/, ".html").replace(/(^|\/|\\)index.html$/, "$1");
+            }
+        });
+    })
 
-    // My dynamic auto-defaults, to be called after default_values and ancestry
+    // Dynamic auto-defaults, to be called after default_values and ancestry
     .use(autoDefaults())
+
+    .use(inPlace())
 
     // Put the HTML fragments from the steps above
     // into our template, using the Frontmatter
@@ -103,10 +103,8 @@ Metalsmith(__dirname)
         internal_url: [site_url]
     }))
 
-    // sass -> css
-    .use(sass())
-
-    .use(prefixoid([{
+    .use(prefixoid([
+        {
             prefix: site_url,
             convert_relatives: false,
             tag: 'link',
@@ -128,6 +126,9 @@ Metalsmith(__dirname)
             attr: 'src'
         }
     ]))
+
+    // sass -> css
+    .use(sass())
 
     // And tell Metalsmith to fire it all off.
     .build(function(err) {

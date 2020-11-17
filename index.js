@@ -88,7 +88,11 @@ Metalsmith(__dirname)
     // Dynamic auto-defaults, to be called after default_values and ancestry
     .use(autoDefaults())
 
-    .use(inPlace())
+    .use(inPlace({
+        engineOptions: {
+            html: true
+        }
+    }))
 
     // Put the HTML fragments from the steps above
     // into our template, using the Frontmatter

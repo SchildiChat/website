@@ -11,7 +11,7 @@ const inPlace = require('metalsmith-in-place');
 const layouts = require('metalsmith-layouts');
 const externalLinks = require("./lib/metalsmith-external-links");
 const prefixoid = require('metalsmith-prefixoid');
-const sass = require('metalsmith-sass');
+const sass = require('metalsmith-dart-sass');
 
 var site_url = ""
 if (process.argv.length > 2) {

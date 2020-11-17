@@ -10,17 +10,17 @@
     "jstransformer-markdown-it": ">=2.1.0",
     "metalsmith": ">=2.3.0",
     "metalsmith-ancestry": ">=1.5.2",
+    "metalsmith-dart-sass": "^1.0.1",
     "metalsmith-discover-helpers": ">=0.1.1",
     "metalsmith-discover-partials": ">=0.1.2",
     "metalsmith-ignore": ">=1.0.0",
     "metalsmith-in-place": ">=4.4.1",
     "metalsmith-layouts": ">=2.3.1",
     "metalsmith-nested": ">=0.3.8",
-    "metalsmith-prefixoid": ">=1.0.3",
-    "metalsmith-sass": ">=1.7.0"
+    "metalsmith-prefixoid": ">=1.0.3"
   },
   "resolutions": {
-    "node-sass": ">=5.0.0",
+    "sass": ">=1.29.0",
     "core-js": ">=3.7.0",
     "minimatch": ">=3.0.4"
   },

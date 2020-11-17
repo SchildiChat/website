@@ -3,24 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "jstransformer-handlebars": "^1.1.0",
-    "jstransformer-markdown-it": "^2.1.0",
-    "metalsmith": "^2.3.0",
-    "metalsmith-ancestry": "^1.5.2",
-    "metalsmith-default-values": "^3.0.0",
-    "metalsmith-discover-helpers": "^0.1.1",
-    "metalsmith-discover-partials": "^0.1.2",
-    "metalsmith-headings-identifier": "0.0.11",
-    "metalsmith-ignore": "^1.0.0",
-    "metalsmith-in-place": "^4.4.1",
-    "metalsmith-layouts": "^2.3.1",
-    "metalsmith-nested": "^0.3.8",
-    "metalsmith-permalinks": "^2.2.0",
-    "metalsmith-prefixoid": "^1.0.3",
-    "metalsmith-relative-links": "^1.2.0",
-    "metalsmith-sass": "^1.7.0",
-    "node-sass": "^5.0.0"
+  "devDependencies": {
+    "@metalsmith/default-values": ">=3.0.2",
+    "cheerio": "^1.0.0-rc.3",
+    "jstransformer-handlebars": ">=1.1.0",
+    "jstransformer-markdown-it": ">=2.1.0",
+    "metalsmith": ">=2.3.0",
+    "metalsmith-ancestry": ">=1.5.2",
+    "metalsmith-discover-helpers": ">=0.1.1",
+    "metalsmith-discover-partials": ">=0.1.2",
+    "metalsmith-ignore": ">=1.0.0",
+    "metalsmith-in-place": ">=4.4.1",
+    "metalsmith-layouts": ">=2.3.1",
+    "metalsmith-nested": ">=0.3.8",
+    "metalsmith-prefixoid": ">=1.0.3",
+    "metalsmith-sass": ">=1.7.0"
+  },
+  "resolutions": {
+    "node-sass": ">=5.0.0",
+    "core-js": ">=3.7.0",
+    "minimatch": ">=3.0.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

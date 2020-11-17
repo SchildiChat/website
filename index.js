@@ -1,7 +1,7 @@
 // Get our requirements, installed by npm
 const Metalsmith = require('metalsmith');
 const ignore = require('metalsmith-ignore');
-const default_values = require('metalsmith-default-values');
+const defaultValues = require('@metalsmith/default-values');
 const discoverHelpers = require('metalsmith-discover-helpers');
 const nested = require('metalsmith-nested');
 const discoverPartials = require('metalsmith-discover-partials');
@@ -46,7 +46,7 @@ Metalsmith(__dirname)
     .use(ignore(['**/.gitignore']))
 
     // frontmatter (thing in markdown before actual markdown) default values
-    .use(default_values([
+    .use(defaultValues([
         {
             pattern: '**/*.{html,md,hbs,md.hbs,fakechild}',
             defaults: site_default_params

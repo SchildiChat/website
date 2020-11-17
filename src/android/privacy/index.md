@@ -1,6 +1,6 @@
 ---
 title: "SchildiChat for Android privacy policy"
-from_parent_title: "Privacy policy"
+nav_name: "Privacy policy"
 hide_page_title: true
 ---
 

@@ -5,7 +5,6 @@ const default_values = require('metalsmith-default-values');
 const discoverHelpers = require('metalsmith-discover-helpers');
 const nested = require('metalsmith-nested');
 const discoverPartials = require('metalsmith-discover-partials');
-const relativeLinks = require("metalsmith-relative-links");
 const ancestry = require("metalsmith-ancestry");
 const autoDefaults = require("./lib/metalsmith-auto-defaults");
 const inPlace = require('metalsmith-in-place');
@@ -25,14 +24,13 @@ var site_default_params = {
     layout: 'default.hbs',
     stylesheet: 'base.css',
     copyright_date: new Date().getFullYear(),
-    is_subpage: true,
+    nav_present: true,
     parent_subpages: false,
     main_page: false,
     needs_link_to_top: true,
     order_id: 50,
     overview_list: false,
-    hide_page_title: false,
-    hidden: false
+    hide_page_title: false
 }
 
 // Run Metalsmith in the current directory.
@@ -50,7 +48,7 @@ Metalsmith(__dirname)
     // frontmatter (thing in markdown before actual markdown) default values
     .use(default_values([
         {
-            pattern: '**/*.{html,md,hbs,md.hbs}',
+            pattern: '**/*.{html,md,hbs,md.hbs,fakechild}',
             defaults: site_default_params
         }
     ]))
@@ -69,24 +67,22 @@ Metalsmith(__dirname)
         pattern: /\.hbs$/
     }))
 
-    // Ancestry allows access to parents and children. Links is a dependency.
-    .use(relativeLinks())
+    // Ancestry allows access to parents and children.
     .use(ancestry({
         sortBy: ["order_id", "title"],
         sortFilesFirst: "**/index.*",
         match: "**/*.{html,md,hbs,md.hbs,fakechild}"
     }))
-    .use((files) => {
-        Object.keys(files).forEach((file) => {
-            var data = files[file];
-            if (data.ancestry) {
-                data.ancestry.path = '/' + data.ancestry.path.replace(/\.(md|hbs|md\.hbs)$/, ".html").replace(/(^|\/|\\)index.html$/, "$1");
-            }
-        });
-    })
 
     // Dynamic auto-defaults, to be called after default_values and ancestry
-    .use(autoDefaults())
+    .use(autoDefaults({
+        createUriFromPath: (path) => {
+            return path
+                .replace(/\.(md|hbs|md\.hbs)$/, ".html")
+                .replace(/(^|\/|\\)index.*$/, "$1")
+                .replace(/^\/?/, "/");
+        }
+    }))
 
     .use(inPlace({
         engineOptions: {
@@ -133,6 +129,8 @@ Metalsmith(__dirname)
 
     // sass -> css
     .use(sass())
+
+    .use(ignore(['**/*.fakechild']))
 
     // And tell Metalsmith to fire it all off.
     .build(function(err) {

@@ -1,5 +1,5 @@
 ---
-is_subpage: false
+nav_present: false
 permalink: false
 needs_link_to_top: false
 layout: error.hbs

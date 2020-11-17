@@ -1,6 +1,6 @@
 ---
 title: SchildiChat Desktop
-from_parent_title: Desktop
+nav_name: Desktop
 order_id: 15
 main_page: true
 layout: 'index.hbs'

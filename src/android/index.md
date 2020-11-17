@@ -1,6 +1,6 @@
 ---
 title: SchildiChat for Android
-from_parent_title: Android
+nav_name: Android
 order_id: 10
 main_page: true
 layout: 'index.hbs'

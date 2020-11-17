@@ -12,24 +12,20 @@ Related links
 {{#if parent_subpages}}
 
 {{#ancestry.children}}
-{{#if is_subpage}}
-{{#unless hidden}}
+{{#if nav_present}}
 <li>
-<a class="content-list-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
+<a class="content-list-link" href="{{uri}}">{{#if nav_name}}{{nav_name}}{{else}}{{title}}{{/if}}</a>
 </li>
-{{/unless}}
 {{/if}}
 {{/ancestry.children}}
 
 {{else}}
 
 {{#ancestry.children}}
-{{#if is_subpage}}
-{{#unless hidden}}
+{{#if nav_present}}
 <li>
-<a class="content-list-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
+<a class="content-list-link" href="{{uri}}">{{#if nav_name}}{{nav_name}}{{else}}{{title}}{{/if}}</a>
 </li>
-{{/unless}}
 {{/if}}
 {{/ancestry.children}}
 

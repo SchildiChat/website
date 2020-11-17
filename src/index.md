@@ -1,6 +1,6 @@
 ---
 layout: 'index.hbs'
-is_subpage: false
+nav_present: false
 main_page: true
 needs_link_to_top: false
 ---

@@ -6,10 +6,10 @@
 
 {{#ifEquals ancestry.parent.title ancestry.root.site_title}}
 {{else}}
-<a href="/{{ancestry.parent.path}}" class="sub-site-nav-link">{{ancestry.parent.title}}</a>
+<a href="{{ancestry.parent.uri}}" class="sub-site-nav-link">{{ancestry.parent.nav_name}}</a>
 |
 {{/ifEquals}}
-<a href="/" class="top-site-nav-link">{{ancestry.root.site_title}}</a>
+<a href="{{ancestry.root.uri}}" class="top-site-nav-link">{{ancestry.root.site_title}}</a>
 
 {{else}}
 
@@ -19,6 +19,6 @@
 
 </div>
 
-<div class="siteheader"><a class="siteheader" href="/{{path}}">{{{ site_title }}}</a></div>
+<div class="siteheader"><a class="siteheader" href="{{uri}}">{{{ site_title }}}</a></div>
 
 </div>

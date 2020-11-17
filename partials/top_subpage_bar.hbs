@@ -1,7 +1,5 @@
 {{#ancestry.children}}
-{{#if is_subpage}}
-{{#unless hidden}}
-<a class="site-nav-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
-{{/unless}}
+{{#if nav_present}}
+<a class="site-nav-link" href="{{uri}}">{{nav_name}}</a>
 {{/if}}
 {{/ancestry.children}}

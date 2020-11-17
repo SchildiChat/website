@@ -3,20 +3,16 @@
 {{#if parent_subpages}}
 
 {{#ancestry.parent.ancestry.children}}
-{{#if is_subpage}}
-{{#unless hidden}}
-<a class="page-nav-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
-{{/unless}}
+{{#if nav_present}}
+<a class="page-nav-link" href="{{uri}}">{{#if nav_name}}{{nav_name}}{{else}}{{title}}{{/if}}</a>
 {{/if}}
 {{/ancestry.parent.ancestry.children}}
 
 {{else}}
 
 {{#ancestry.children}}
-{{#if is_subpage}}
-{{#unless hidden}}
-<a class="page-nav-link" href="{{path}}">{{#if from_parent_title}}{{from_parent_title}}{{else}}{{title}}{{/if}}</a>
-{{/unless}}
+{{#if nav_present}}
+<a class="page-nav-link" href="{{uri}}">{{#if nav_name}}{{nav_name}}{{else}}{{title}}{{/if}}</a>
 {{/if}}
 {{/ancestry.children}}
 

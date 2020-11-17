@@ -100,7 +100,7 @@ Metalsmith(__dirname)
 
     // After layouts, these might add some links as well
     .use(externalLinks({
-        internal_url: [site_url]
+        matchNegative: ["^https?:\/\/([^\/]*\.)?schildi\.chat.*"]
     }))
 
     .use(prefixoid([

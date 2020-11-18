@@ -12,15 +12,19 @@ body {
     text-align: center;
 }
 
-main {
+%container {
     width: 100%;
-    margin: auto;
-    padding: 3em 15px;
 
     @media only screen and (min-width: $breakpoint1) {
         padding-left: 2em;
         padding-right: 2em;
     }
+}
+
+main {
+    @extend %container;
+    margin: auto;
+    padding: 3em 15px;
 }
 
 .logo {
@@ -144,17 +148,6 @@ a:not(.button) {
 }
 
 footer {
-    width: 100%;
+    @extend %container;
     padding: 0 15px 2em;
-
-    @media only screen and (min-width: $breakpoint1) {
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-
-    a {
-        text-decoration: none;
-        margin: .5em 1em;
-        display: inline-block;
-    }
 }

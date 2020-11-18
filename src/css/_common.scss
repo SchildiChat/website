@@ -33,3 +33,22 @@ body {
         text-decoration: underline;
     }
 }
+
+.footer-links {
+    margin-top: -.6em;
+    margin-left: -2em;
+}
+
+.footer-link {
+    text-decoration: none;
+    padding-top: .6em;
+    padding-left: 2em;
+    display: inline-block;
+}
+
+.footer-copyright {
+    color: $text_secondary;
+    font-size: smaller;
+    text-align: center;
+    margin-top: 1.2em;
+}

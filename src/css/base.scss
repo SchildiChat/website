@@ -1,10 +1,13 @@
 @use 'variables' as *;
 @use 'common';
 
-.main {
-    margin: 0 auto;
-    width: 48em;
-    max-width: 100%;
+.container {
+    width: 100%;
+    max-width: 48em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 a {
@@ -40,6 +43,11 @@ h6 {
     padding: 0;
 }
 
+// ToDo: Fix mobile 100%, 100vh mismatch (via JavaScript)
+main {
+    flex-grow: 1;
+}
+
 div.siteheader {
     font-size: 2.5em;
     margin-bottom: 0.2em;
@@ -57,13 +65,6 @@ div.pageheader {
     color: $accent;
 }
 
-.copyright {
-    color: $text_secondary;
-    font-size: smaller;
-    text-align: center;
-    margin-top: 1em;
-}
-
 %content-separator {
     height: 1px;
     background: $color_separator;
@@ -74,34 +75,30 @@ div.pageheader {
     margin-top: 0.5em;
 }
 
+footer {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
 .footer-separator {
     @extend %content-separator;
-    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 .footer-links {
     text-align: center;
     justify-content: center;
-    margin-top: 1em;
-}
-
-%nav-link {
-    text-decoration: none;
-    margin: 0.2em;
-    font-weight: bold;
-}
-%nav-link:hover {
-    text-decoration: underline;
 }
 
 .footer-link {
-    @extend %nav-link;
     font-size: .9em;
 }
 
 .site-nav-link {
-    @extend %nav-link;
+    text-decoration: none;
+    margin: 0.2em;
     font-size: 1em;
+    font-weight: bold;
 }
 
 // Back to top navigation

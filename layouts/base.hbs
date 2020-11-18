@@ -2,7 +2,7 @@
 layout: skeleton.hbs
 ---
 
-<main class="main">
+<main class="container">
 
 {{{ contents }}}
 
@@ -10,9 +10,9 @@ layout: skeleton.hbs
 {{> content_list }}
 {{/if}}
 
-<div class="footer-separator"></div>
-{{> footer_content }}
-
-{{> copyright }}
-
 </main>
+
+<footer class="container">
+    <div class="footer-separator"></div>
+    {{> footer_content }}
+</footer>

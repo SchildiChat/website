@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+    background: $bg;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text_primary;
+    background: none;
+    font-family: $font_stack;
+    margin: 0;
+}
+
+%link-colors {
+    &:link, &:visited {
+        color: $text_primary;
+    }
+    &:hover {
+        color: $accent;
+        text-decoration: underline;
+    }
+    &:active {
+        color: $active;
+        text-decoration: underline;
+    }
+}

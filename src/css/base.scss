@@ -1,24 +1,14 @@
 @use 'variables' as *;
-
-body {
-    color: $text_primary;
-    background: $bg;
-    font-family: $font_stack;
-}
+@use 'common';
 
 .main {
     margin: 0 auto;
-    max-width: 42em;
+    width: 48em;
+    max-width: 100%;
 }
 
-a:link, a:visited {
-    color: $text_primary;
-}
-a:hover {
-    color: $accent;
-}
-a:active {
-    color: $active;
+a {
+    @extend %link-colors;
 }
 
 h1, h2, h3, h4, h5, h6 {

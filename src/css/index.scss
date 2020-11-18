@@ -1,29 +1,15 @@
 @use 'variables' as *;
+@use 'common';
 
 $breakpoint1: 668px;
 $breakpoint2: 768px;
 
-*, ::before, ::after {
-    box-sizing: border-box;
-}
-
-html {
-    height: 100vh;
-    color: $text_primary;
-    background: $bg;
-    font-family: $font_stack;
-}
-
 body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 0;
+    background: $bg;
     background: url('/img/background.jpg');
     background-size: cover;
     background-position: 50% 40%;
+    text-align: center;
 }
 
 main {
@@ -61,17 +47,7 @@ p {
 }
 
 a:not(.button) {
-    &:link, &:visited {
-        color: $text_primary;
-    }
-    &:hover {
-        color: $accent;
-        text-decoration: underline;
-    }
-    &:active {
-        color: $active;
-        text-decoration: underline;
-    }
+    @extend %link-colors;
 }
 
 .loading-container {
@@ -119,11 +95,11 @@ a:not(.button) {
 .button-default {
     border: 1px solid $text_primary;
     color: $text_primary;
-}
 
-.button-default:hover {
-    background-color: $accent;
-    border: 1px solid $accent;
+    &:hover {
+        background-color: $accent;
+        border: 1px solid $accent;
+    }
 }
 
 .disabled {

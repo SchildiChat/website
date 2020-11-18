@@ -1,5 +1,12 @@
 @use 'variables' as *;
 
+$breakpoint1: 668px;
+$breakpoint2: 768px;
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
 html {
     height: 100vh;
     color: $text_primary;
@@ -10,8 +17,8 @@ html {
 body {
     min-height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
     text-align: center;
     margin: 0;
     background: url('/img/background.jpg');
@@ -22,7 +29,12 @@ body {
 main {
     width: 100%;
     margin: auto;
-    padding: 2em 15px;
+    padding: 3em 15px;
+
+    @media only screen and (min-width: $breakpoint1) {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
 
 .logo {
@@ -44,17 +56,21 @@ h1 {
 p {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    font-size: 1.1em;
+    font-weight: 300;
 }
 
-p a {
+a:not(.button) {
     &:link, &:visited {
         color: $text_primary;
     }
     &:hover {
         color: $accent;
+        text-decoration: underline;
     }
     &:active {
         color: $active;
+        text-decoration: underline;
     }
 }
 
@@ -89,7 +105,7 @@ p a {
 .button {
     background-color: transparent;
     border: none;
-    border-radius: .25rem;
+    border-radius: 500px;
     color: inherit;
     padding: .375rem .75rem;
     text-align: center;
@@ -100,52 +116,14 @@ p a {
     cursor: pointer;
 }
 
-.button1 {
-    border: 1px solid $accent;
-    background-color: $accent;
-}
-
-.button1:hover {
-    border: 1px solid $accent;
-    background-color: $accent;
-}
-
-.button2 {
+.button-default {
     border: 1px solid $text_primary;
     color: $text_primary;
 }
 
-.button2:hover {
-    border: 1px solid #33691e;
-    background-color: #33691e;
-}
-
-.button3 {
-    border: 1px solid $text_primary;
-    color: $text_primary;
-}
-
-.button3:hover {
-    border: 1px solid #33691e;
-    background-color: $accent;
-}
-
-.button4 {
-    border: 1px solid $text_primary;
-    color: $text_primary;
-}
-
-.button4:hover {
+.button-default:hover {
     background-color: $accent;
     border: 1px solid $accent;
-}
-
-.button5 {
-    border: 2px solid #555555;
-}
-
-.button5:hover {
-    background-color: #555555;
 }
 
 .disabled {
@@ -168,6 +146,12 @@ p a {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: $breakpoint2) {
+        width: 100%;
+        max-width: 12rem;
+        padding: .575rem .95rem;
+    }
 }
 
 .button .icon {
@@ -183,17 +167,18 @@ p a {
     margin-right: .5em;
 }
 
-@media only screen and (max-width: 768px) {
-    .buttons .button {
-        width: 100%;
-        max-width: 12rem;
-        padding: .575rem .95rem;
-    }
-}
+footer {
+    width: 100%;
+    padding: 0 15px 2em;
 
-@media only screen and (min-width: 668px) {
-    main {
+    @media only screen and (min-width: $breakpoint1) {
         padding-left: 2em;
         padding-right: 2em;
+    }
+
+    a {
+        text-decoration: none;
+        margin: .5em 1em;
+        display: inline-block;
     }
 }

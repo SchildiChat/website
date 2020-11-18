@@ -1,10 +1,10 @@
-@use 'base' as *;
-
-$index_text_color: white;
+@use 'variables' as *;
 
 html {
     height: 100vh;
-    color: $index_text_color;
+    color: $text_primary;
+    background: $bg;
+    font-family: $font_stack;
 }
 
 body {
@@ -46,8 +46,16 @@ p {
     margin-bottom: 0.5rem;
 }
 
-a {
-    color: inherit;
+p a {
+    &:link, &:visited {
+        color: $text_primary;
+    }
+    &:hover {
+        color: $accent;
+    }
+    &:active {
+        color: $active;
+    }
 }
 
 .loading-container {
@@ -103,8 +111,8 @@ a {
 }
 
 .button2 {
-    border: 1px solid $index_text_color;
-    color: $index_text_color;
+    border: 1px solid $text_primary;
+    color: $text_primary;
 }
 
 .button2:hover {
@@ -113,8 +121,8 @@ a {
 }
 
 .button3 {
-    border: 1px solid $index_text_color;
-    color: $index_text_color;
+    border: 1px solid $text_primary;
+    color: $text_primary;
 }
 
 .button3:hover {
@@ -123,8 +131,8 @@ a {
 }
 
 .button4 {
-    border: 1px solid $index_text_color;
-    color: $index_text_color;
+    border: 1px solid $text_primary;
+    color: $text_primary;
 }
 
 .button4:hover {
@@ -163,7 +171,7 @@ a {
 }
 
 .button .icon {
-    background-color: $index_text_color;
+    background-color: $text_primary;
     height: 1.2em;
     width: 1.2em;
     mask-size: cover;

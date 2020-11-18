@@ -1,16 +1,9 @@
-$font_stack: Arial, sans-serif;
-$text_primary: #ffffff;
-$text_secondary: #b3b3b3;
-$color_separator: #808080;
-$bg: #212121;
-$accent: #8bc34a;
-$accent_secondary: #cddc39;
-$visited: #ff9800;
+@use 'variables' as *;
 
 body {
     color: $text_primary;
+    background: $bg;
     font-family: $font_stack;
-    background-color: $bg;
 }
 
 .main {
@@ -25,7 +18,7 @@ a:hover {
     color: $accent;
 }
 a:active {
-    color: $visited;
+    color: $active;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,7 +52,7 @@ h6 {
 
 div.siteheader {
     font-size: 2.5em;
-    margin--bottom: 0.2em;
+    margin-bottom: 0.2em;
     text-align: start;
     color: $accent;
 }

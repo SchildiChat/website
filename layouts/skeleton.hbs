@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{{ lang }}}">
+<head>
+    <meta charset="utf-8">
+    {{#ifEquals title site_title}}
+    <title>{{ site_title}}</title>
+    {{else}}
+    <title>{{ title }} | {{site_title}}</title>
+    {{/ifEquals}}
+    <meta name="description" content="{{ description }}" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" href="/css/{{{ stylesheet }}}"/>
+    <link rel="shortcut icon" href="/favicon.png" type="image/png"/>
+</head>
+<body>
+    {{{ contents }}}
+</body>
+</html>

@@ -1,0 +1,191 @@
+@use 'base' as *;
+
+$index_text_color: white;
+
+html {
+    height: 100vh;
+    color: $index_text_color;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0;
+    background: url('/img/background.jpg');
+    background-size: cover;
+    background-position: 50% 40%;
+}
+
+main {
+    width: 100%;
+    margin: auto;
+    padding: 2em 15px;
+}
+
+.logo {
+    width: 10.5rem;
+    max-width: 50vw;
+}
+
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: inherit;
+}
+
+.loading-container {
+    display: inline-block;
+    width: 1.25em;
+    text-align: left;
+}
+
+.loading:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 3000ms infinite;      
+    animation: ellipsis steps(4,end) 3000ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 1.25em;    
+    }
+}
+
+@-webkit-keyframes ellipsis {
+    to {
+        width: 1.25em;    
+    }
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    border-radius: .25rem;
+    color: inherit;
+    padding: .375rem .75rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    transition-duration: .15s;
+    cursor: pointer;
+}
+
+.button1 {
+    border: 1px solid $accent;
+    background-color: $accent;
+}
+
+.button1:hover {
+    border: 1px solid $accent;
+    background-color: $accent;
+}
+
+.button2 {
+    border: 1px solid $index_text_color;
+    color: $index_text_color;
+}
+
+.button2:hover {
+    border: 1px solid #33691e;
+    background-color: #33691e;
+}
+
+.button3 {
+    border: 1px solid $index_text_color;
+    color: $index_text_color;
+}
+
+.button3:hover {
+    border: 1px solid #33691e;
+    background-color: $accent;
+}
+
+.button4 {
+    border: 1px solid $index_text_color;
+    color: $index_text_color;
+}
+
+.button4:hover {
+    background-color: $accent;
+    border: 1px solid $accent;
+}
+
+.button5 {
+    border: 2px solid #555555;
+}
+
+.button5:hover {
+    background-color: #555555;
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.buttons {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.buttons .button {
+    width: 8rem;
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button .icon {
+    background-color: $index_text_color;
+    height: 1.2em;
+    width: 1.2em;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    margin-right: .5em;
+}
+
+@media only screen and (max-width: 768px) {
+    .buttons .button {
+        width: 100%;
+        max-width: 12rem;
+        padding: .575rem .95rem;
+    }
+}
+
+@media only screen and (min-width: 668px) {
+    main {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}

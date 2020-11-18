@@ -17,18 +17,31 @@ all: build
 
 
 # We extract SchildiChat-Android screenshots from its git repo
-SCHILDI_REPO ?= ~/AndroidStudioProjects/SchildiChat-android
-SCHILDI_PICS_SRC_DIR := $(SCHILDI_REPO)/fastlane/metadata/android/en-US/images/phoneScreenshots/
-SCHILDI_PICS_NOPATH := 2_en-US.png 3_en-US.png 4_en-US.png
-SCHILDI_PICS_SRC := $(addprefix $(SCHILDI_PICS_SRC_DIR)/, $(SCHILDI_PICS_NOPATH))
-SCHILDI_PICS_TARGET_DIR := src/android/img
-SCHILDI_PICS := $(addprefix $(SCHILDI_PICS_TARGET_DIR)/, $(SCHILDI_PICS_NOPATH))
+ANDRO_SCHILDI_REPO ?= ~/AndroidStudioProjects/SchildiChat-android
+ANDRO_SCHILDI_PICS_SRC_DIR := $(ANDRO_SCHILDI_REPO)/fastlane/metadata/android/en-US/images/phoneScreenshots/
+ANDRO_SCHILDI_PICS_NOPATH := 2_en-US.png 3_en-US.png 4_en-US.png
+ANDRO_SCHILDI_PICS_SRC := $(addprefix $(ANDRO_SCHILDI_PICS_SRC_DIR)/, $(ANDRO_SCHILDI_PICS_NOPATH))
+ANDRO_SCHILDI_PICS_TARGET_DIR := src/android/img
+ANDRO_SCHILDI_PICS := $(addprefix $(ANDRO_SCHILDI_PICS_TARGET_DIR)/, $(ANDRO_SCHILDI_PICS_NOPATH))
 
-$(SCHILDI_PICS_TARGET_DIR)/%.png: $(SCHILDI_PICS_SRC_DIR)/%.png
+$(ANDRO_SCHILDI_PICS_TARGET_DIR)/%.png: $(ANDRO_SCHILDI_PICS_SRC_DIR)/%.png
+	cp $< $@
+
+
+
+# We extract SchildiChat-Web/-Desktop screenshots from its git repo
+WEB_SCHILDI_REPO ?= ~/git/schildichat-desktop
+WEB_SCHILDI_PICS_SRC_DIR := $(WEB_SCHILDI_REPO)/screenshots/
+WEB_SCHILDI_PICS_NOPATH := 1.png
+WEB_SCHILDI_PICS_SRC := $(addprefix $(WEB_SCHILDI_PICS_SRC_DIR)/, $(WEB_SCHILDI_PICS_NOPATH))
+WEB_SCHILDI_PICS_TARGET_DIR := src/desktop/img
+WEB_SCHILDI_PICS := $(addprefix $(WEB_SCHILDI_PICS_TARGET_DIR)/, $(WEB_SCHILDI_PICS_NOPATH))
+
+$(WEB_SCHILDI_PICS_TARGET_DIR)/%.png: $(WEB_SCHILDI_PICS_SRC_DIR)/%.png
 	cp $< $@
 
 # Add files that need rules to be run before metalsmith here.
-GENERATED_SRC := $(SCHILDI_PICS)
+GENERATED_SRC := $(ANDRO_SCHILDI_PICS) $(WEB_SCHILDI_PICS)
 
 build-dependencies: $(GENERATED_SRC)
 

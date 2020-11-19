@@ -18,6 +18,7 @@ var site_url = ""
 if (process.argv.length > 2) {
     site_url = process.argv[2];
 }
+site_url = site_url.replace(/\/?$/, ""); // enforce no ending slash
 
 var site_default_params = {
     title: "SchildiChat",

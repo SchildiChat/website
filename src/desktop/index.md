@@ -17,10 +17,6 @@ The most important changes of SchildiChat-Desktop compared to Element are:
 - Bigger items in the room list
 - &hellip; and more!
 
-While SchildiChat-Desktop should be already usable as is, it's still better seen as a
-proof-of-concept rather than a finished product, as there are still a few UX bugs
-remaining, and no ways to configure Schildi's features.
-
 ## Screenshot
 
 <div class="screenshot_container">

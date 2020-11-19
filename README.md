@@ -65,3 +65,4 @@ They can be used together (e.g. `*.md.hbs` for handlebars --> markdown --> html)
 - Website privacy policy and impressum
 - Navigation
 - Contents
+- inline-svg

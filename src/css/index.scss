@@ -151,3 +151,7 @@ footer {
     @extend %container;
     padding: 0 15px 2em;
 }
+
+.footer-content {
+    flex-direction: column-reverse;
+}

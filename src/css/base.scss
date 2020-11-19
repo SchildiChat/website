@@ -76,22 +76,11 @@ div.pageheader {
 }
 
 footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    border-top: 1px solid $color_separator;
     margin-top: 2em;
-    margin-bottom: 1em;
-}
-
-.footer-separator {
-    @extend %content-separator;
-    margin-bottom: 1em;
-}
-
-.footer-links {
-    text-align: center;
-    justify-content: center;
-}
-
-.footer-link {
-    font-size: .9em;
 }
 
 .site-nav-link {

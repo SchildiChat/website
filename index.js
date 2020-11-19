@@ -2,6 +2,7 @@
 const Metalsmith = require('metalsmith');
 const ignore = require('metalsmith-ignore');
 const defaultValues = require('@metalsmith/default-values');
+const favicons = require('metalsmith-favicons');
 const discoverHelpers = require('metalsmith-discover-helpers');
 const nested = require('metalsmith-nested');
 const discoverPartials = require('metalsmith-discover-partials');
@@ -53,6 +54,16 @@ Metalsmith(__dirname)
         }
     ]))
 
+    .use(favicons({
+        src: 'img/SchildiChat_nopadding.svg',
+        dest: 'img/favicons/',
+        icons: {
+            favicons: true
+        }
+    }))
+    .use(ignore(['img/favicons/manifest.json']))
+
+    // Helpers to use in *.hbs files
     .use(discoverHelpers())
 
     // Allow nesting layouts // WARN: don't use layouts directory directly after that
@@ -61,7 +72,7 @@ Metalsmith(__dirname)
         generated: 'build-layouts'
     }))
 
-    // Partials to include in layouts
+    // Partials to include in *.hbs files
     .use(discoverPartials({
         directory: 'partials',
         pattern: /\.hbs$/

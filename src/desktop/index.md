@@ -15,7 +15,6 @@ The most important changes of SchildiChat-Desktop compared to Element are:
 - A unifed chat list for both direct and group chats
 - Message bubbles
 - Bigger items in the room list
-- Telegram style time
 - &hellip; and more!
 
 While SchildiChat-Desktop should be already usable as is, it's still better seen as a

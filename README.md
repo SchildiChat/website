@@ -51,6 +51,8 @@ in order to have them put into the devDependencies.
 - [headings plugin](https://github.com/segmentio/metalsmith-headings)
 - [headings-identifier plugin](https://github.com/majodev/metalsmith-headings-identifier)
 - [generate navigation](https://github.com/unstoppablecarl/metalsmith-navigation) (maybe rather use ancestry to meet individual needs)
+- [inline svg](https://github.com/meatysolutions/metalsmith-inline-svg)
+- [multi language](https://www.npmjs.com/package/metalsmith-multi-language)
 
 ### jstransformers
 Those are used by `metalsmith-in-place` and `metalsmith-layouts`, in our case:
@@ -66,3 +68,4 @@ They can be used together (e.g. `*.md.hbs` for handlebars --> markdown --> html)
 - Navigation
 - Contents
 - inline-svg
+- pass related links as array

@@ -12,49 +12,59 @@ var initSupmat = function() {
 		document.documentElement.style.setProperty('--vh', (height/100)+"px");
 	};
 
-	// change between space-between and space-around
-	const justifyBetweenAround = () => {
-		var containers = document.getElementsByClassName("justify-between-around");
+	/** 
+	 * Change flex-direction between row and column, also reverse opposit direction if needed.
+	 * 
+	 * @todo allow nesting through building a tree, start with root, append class to each once adjusted, only adjust child if parent is adjusted
+	 * @todo dethrottle
+	 */
+	const flexDirectionAdjust = () => {
+		var containers = document.getElementsByClassName("flex-direction-adjust");
 		for (var i = 0; i < containers.length; i++) {
-			var parent = containers.item(i);
-			var style = parent.currentStyle || window.getComputedStyle(parent),
-				width = parseFloat(style.width),
-				margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight),
-				padding = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight),
-				border = parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
-			var parentWidth = width;
+			var parent = containers[i];
 
-			console.log(parentWidth);
+			// default row-column
+			var xAxis = true; // false for yAxis
+			var reverse = false;
+			if (parent.classList.contains('row-column-reverse')) {
+				xAxis = true;
+				reverse = true;
+			}
+			if (parent.classList.contains('column-row')) {
+				xAxis = false;
+				reverse = false;
+			}
+			if (parent.classList.contains('column-row-reverse')) {
+				xAxis = false;
+				reverse = true;
+			}
+
+			var style = parent.currentStyle || window.getComputedStyle(parent);
+			var	parentSize = parseFloat(xAxis ? style.width : style.height);
 
 			var children = parent.children;
-			var childrenWidth = 0;
-			var lastMargin = 0;
+			var childrenSize = 0;
 			for (var j = 0; j < children.length; j++) {
-				var child = children.item(j);
-				var style = child.currentStyle || window.getComputedStyle(child),
-					width = parseFloat(style.width),
-					margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight),
-					padding = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight),
-					border = parseFloat(style.borderLeftWidth) + parseFloat(style.borderRightWidth);
-				var childWidth = width + margin - padding + border;
-				childrenWidth += childWidth;
-				lastMargin = margin;
-				console.log(child.getBoundingClientRect().bottom);
+				var child = children[j];
+				var style = child.currentStyle || window.getComputedStyle(child);
+				var width = parseFloat(xAxis ? style.width : style.height);
+				var margin = parseFloat(xAxis ? style.marginLeft : style.marginTop) + parseFloat(xAxis ? style.marginRight : style.marginBottom);
+				// var padding = parseFloat(xAxis ? style.paddingLeft : style.paddingTop) + parseFloat(xAxis ? style.paddingRight : style.paddingBottom);
+				var border = parseFloat(xAxis ? style.borderLeftWidth : style.borderTopWidth) + parseFloat(xAxis ? style.borderRightWidth : style.borderBottomWidth);
+				childrenSize += width + margin + border;
 			}
-			childWidth -= lastMargin;
-			console.log(childrenWidth);
 
-			if (parentWidth >= childrenWidth) {
-				parent.style.flexDirection = "row";
+			if (parentSize >= childrenSize) {
+				parent.style.flexDirection = (xAxis ? "row" : "column");
 			} else {
-				parent.style.flexDirection = "column-reverse";
+				parent.style.flexDirection = (xAxis ? "column" : "row") + (reverse ? "-reverse" : "");
 			}
 		}
 	};
 
 	const doStuffOnResize = () => {
 		setVh();
-		justifyBetweenAround();
+		flexDirectionAdjust();
 	}
 
 	window.addEventListener('load', doStuffOnResize, false);

@@ -37,10 +37,10 @@ Compared to the Element app, SchildiChat features following changes:
 
 ### F-Droid
 
-The FOSS variant (without closed-source code) is available from the [official F-Droid repositories](https://f-droid.org/de/packages/de.spiritcroc.riotx/).
-However, this variant does not allow for push notifications, and thus might feature increased battery drain and a higher delay for delivering messages.
+The **FOSS variant** (without closed-source code) is available from the [official F-Droid repository](https://f-droid.org/de/packages/de.spiritcroc.riotx/).
+However, this variant **does not allow for push notifications**, and thus **might** feature increased battery drain and a higher delay for delivering messages.
 
-If you prefer the variant that features push notifications, you can get it from the [SpiritCroc F-Droid repository](install-from-sc_fdroid).
+If you prefer the **variant that features push notifications**, you can get it from the [SpiritCroc F-Droid repository](install-from-sc_fdroid).
 
 
 ### Google Play Store
@@ -53,4 +53,6 @@ In case SchildiChat becomes available in the Play Store in the future, this vers
 
 ### Direct download
 
-If you don't want to install F-Droid, you can also download the latest version [here](https://s2.spiritcroc.de/fdroid/SchildiChat.apk).
+If you don't want to install F-Droid, you can also download the latest version
+- **with** push notifications from the [SpiritCroc F-Droid repository](https://s2.spiritcroc.de/fdroid/SchildiChat.apk)
+- **without** push notifications from the [official F-Droid repository](https://f-droid.org/en/packages/de.spiritcroc.riotx/) _(scroll down)_

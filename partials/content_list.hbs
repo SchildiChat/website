@@ -12,7 +12,7 @@ Related links
 {{#if parent_subpages}}
 
 {{#ancestry.children}}
-{{#if nav_present}}
+{{#if nav_show}}
 <li>
 <a class="content-list-link" href="{{uri}}">{{#if nav_name}}{{nav_name}}{{else}}{{title}}{{/if}}</a>
 </li>
@@ -22,7 +22,7 @@ Related links
 {{else}}
 
 {{#ancestry.children}}
-{{#if nav_present}}
+{{#if nav_show}}
 <li>
 <a class="content-list-link" href="{{uri}}">{{#if nav_name}}{{nav_name}}{{else}}{{title}}{{/if}}</a>
 </li>

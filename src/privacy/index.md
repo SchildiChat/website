@@ -1,5 +1,5 @@
 ---
 title: "Privacy policy"
-nav_present: false
+nav_show: false
 ---
 TODO

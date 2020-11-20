@@ -3,7 +3,7 @@
 {{#if parent_subpages}}
 
 {{#ancestry.parent.ancestry.children}}
-{{#if nav_present}}
+{{#if nav_show}}
 <a class="page-nav-link" href="{{uri}}">{{#if nav_name}}{{nav_name}}{{else}}{{title}}{{/if}}</a>
 {{/if}}
 {{/ancestry.parent.ancestry.children}}
@@ -11,7 +11,7 @@
 {{else}}
 
 {{#ancestry.children}}
-{{#if nav_present}}
+{{#if nav_show}}
 <a class="page-nav-link" href="{{uri}}">{{#if nav_name}}{{nav_name}}{{else}}{{title}}{{/if}}</a>
 {{/if}}
 {{/ancestry.children}}

@@ -1,6 +1,6 @@
 ---
 title: "Imprint"
-nav_present: false
+nav_show: false
 ---
 
 TODO

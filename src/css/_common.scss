@@ -42,6 +42,75 @@ body {
     }
 }
 
+.site-nav {
+    overflow-x: hidden;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $color_separator;
+    margin-bottom: 2em;
+    font-size: 1.1em;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 1.6em;
+    text-decoration: none;
+    letter-spacing: -1px;
+    font-weight: bold;
+
+    &:link, &:hover, &:active, &:visited {
+        text-decoration: inherit;
+        color: inherit;
+    }
+
+    img {
+        height: 1.6em;
+        margin-right: .4em;
+        margin-top: -.5em;
+        margin-bottom: -.5em;
+    }
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: -1.8rem;
+    margin-left: -4rem;
+
+    > * {
+        margin-top: 1.8rem;
+        margin-left: 4rem;
+    }
+}
+
+.nav-links {
+    margin-top: -.6rem;
+    margin-left: -2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    margin-top: .6rem;
+    margin-left: 2rem;
+    font-weight: bold;
+
+    &.active {
+        color: $accent;
+    }
+}
+
 footer {
     font-size: .9em;
     overflow-x: hidden;

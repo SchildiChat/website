@@ -27,13 +27,14 @@ var site_default_params = {
     layout: 'default.hbs',
     stylesheet: 'base.css',
     copyright_date: new Date().getFullYear(),
-    nav_present: true,
+    nav_show: true,
     parent_subpages: false,
     main_page: false,
     needs_link_to_top: true,
     order_id: 50,
     overview_list: false,
-    hide_page_title: false
+    hide_page_title: false,
+    nav_show: true
 }
 
 // Run Metalsmith in the current directory.
@@ -53,6 +54,10 @@ Metalsmith(__dirname)
         {
             pattern: '**/*.{html,md,hbs,md.hbs,fakechild}',
             defaults: site_default_params
+        },
+        {
+            pattern: 'error/**/*',
+            defaults: { nav_show: false }
         }
     ]))
 

@@ -3,8 +3,13 @@
 
 var initSupmat = function() {
 	// for stupid vh handling with address bar on mobile browsers
+	var vhElem = document.createElement('div');
+	vhElem.style.cssText = 'position:fixed;top:0;bottom:0;width:0';
+	document.body.appendChild(vhElem);
 	const setVh = () => {
-		document.documentElement.style.setProperty('--vh', (window.innerHeight/100)+"px");
+		var style = vhElem.currentStyle || window.getComputedStyle(vhElem);
+		var height = parseFloat(style.height);
+		document.documentElement.style.setProperty('--vh', (height/100)+"px");
 	};
 
 	// change between space-between and space-around

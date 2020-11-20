@@ -53,6 +53,8 @@ in order to have them put into the devDependencies.
 - [generate navigation](https://github.com/unstoppablecarl/metalsmith-navigation) (maybe rather use ancestry to meet individual needs)
 - [inline svg](https://github.com/meatysolutions/metalsmith-inline-svg)
 - [multi language](https://www.npmjs.com/package/metalsmith-multi-language)
+- responsive images: [generate](https://github.com/AnthonyAstige/metalsmith-picset-generate) and [helper](https://github.com/AnthonyAstige/metalsmith-picset-handlebars-helper)
+- [optimize svgs](https://github.com/ben-eb/metalsmith-svgo)
 
 ### jstransformers
 Those are used by `metalsmith-in-place` and `metalsmith-layouts`, in our case:

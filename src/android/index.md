@@ -22,13 +22,13 @@ Compared to the Element app, SchildiChat features following changes:
 
 ## Screenshots
 
-<div class="screenshot_container">
+<div class="screenshot-container">
 <!--
 <img alt="Screenshot" src="android/1_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
 -->
-<img alt="Screenshot" src="img/2_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
-<img alt="Screenshot" src="img/3_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
-<img alt="Screenshot" src="img/4_en-US.png" class="phone_screenshot" onclick="window.open(src, '_self');" />
+<a href="img/2_en-US.png" class="phone-screenshot"><img alt="Screenshot" src="img/2_en-US.png"></a>
+<a href="img/3_en-US.png" class="phone-screenshot"><img alt="Screenshot" src="img/3_en-US.png"></a>
+<a href="img/4_en-US.png" class="phone-screenshot"><img alt="Screenshot" src="img/4_en-US.png"></a>
 </div>
 
 

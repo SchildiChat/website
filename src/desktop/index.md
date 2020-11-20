@@ -19,8 +19,8 @@ The most important changes of SchildiChat-Desktop compared to Element are:
 
 ## Screenshot
 
-<div class="screenshot_container">
-<img src="img/1.png" alt="Screenshot" onclick="window.open(src, '_self');" />
+<div class="screenshot-container">
+<a href="img/1.png" class="desktop-screenshot"><img src="img/1.png" alt="Screenshot"></a>
 </div>
 
 ## Where can I get it?

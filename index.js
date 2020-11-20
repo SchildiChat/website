@@ -13,6 +13,7 @@ const layouts = require('metalsmith-layouts');
 const externalLinks = require("./lib/metalsmith-external-links");
 const prefixoid = require('metalsmith-prefixoid');
 const sass = require('metalsmith-dart-sass');
+const webpack = require('@goodthnx/metalsmith-webpack')
 
 var site_url = ""
 if (process.argv.length > 2) {
@@ -139,10 +140,16 @@ Metalsmith(__dirname)
         }
     ]))
 
+    .use(ignore(['**/*.fakechild']))
+
     // sass -> css
     .use(sass())
 
-    .use(ignore(['**/*.fakechild']))
+    // webpack for js
+    .use(webpack({
+        pattern: 'js/bundle.js',
+        config: './webpack.config.js'
+    }))
 
     // And tell Metalsmith to fire it all off.
     .build(function(err) {

@@ -25,7 +25,7 @@ The most important changes of SchildiChat-Desktop compared to Element are:
 
 ## Where can I get it?
 - [Downloads for Desktop](https://github.com/SchildiChat/schildichat-desktop/releases)  
-- Hosted web variant: [https://app.schildi.chat/](https://app.schildi.chat/)
+- [https://app.schildi.chat/](https://app.schildi.chat/) (hosted web variant)
 
 ## Get in touch
 Feel free to [join the discussion on matrix](https://matrix.to/#/#schildichat-web:matrix.org).

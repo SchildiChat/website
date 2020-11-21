@@ -56,3 +56,8 @@ In case SchildiChat becomes available in the Play Store in the future, this vers
 If you don't want to install F-Droid, you can also download the latest version
 - **with** push notifications from the [SpiritCroc F-Droid repository](https://s2.spiritcroc.de/fdroid/SchildiChat.apk)
 - **without** push notifications from the [official F-Droid repository](https://f-droid.org/en/packages/de.spiritcroc.riotx/) _(scroll down)_
+
+
+## Get in touch
+Feel free to [join the discussion on matrix](https://matrix.to/#/#schildichat-android:matrix.org).
+

@@ -2,7 +2,6 @@
 <div class="nav-links-holder">
   <div class="nav-links">
     {{#ancestry.root}}
-      <a href="{{uri}}" class="nav-link">{{nav_name}}</a>
       {{#ancestry.children}}
         {{#if nav_show}}
           <a href="{{uri}}" class="nav-link {{#ifIn this @root.nav_active }} active{{/ifIn}}">{{nav_name}}</a>

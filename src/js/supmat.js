@@ -19,24 +19,14 @@ var initSupmat = function() {
 	 * @todo dethrottle
 	 */
 	const flexDirectionAdjust = () => {
-		var containers = document.getElementsByClassName("flex-direction-adjust");
+		var containers = document.getElementsByClassName("flex-dynamic-adjust");
 		for (var i = 0; i < containers.length; i++) {
 			var parent = containers[i];
 
-			// default row-column
+			// default-row
 			var xAxis = true; // false for yAxis
-			var reverse = false;
-			if (parent.classList.contains('row-column-reverse')) {
-				xAxis = true;
-				reverse = true;
-			}
-			if (parent.classList.contains('column-row')) {
+			if (parent.classList.contains('default-column')) {
 				xAxis = false;
-				reverse = false;
-			}
-			if (parent.classList.contains('column-row-reverse')) {
-				xAxis = false;
-				reverse = true;
 			}
 
 			var style = parent.currentStyle || window.getComputedStyle(parent);
@@ -54,10 +44,20 @@ var initSupmat = function() {
 				childrenSize += width + margin + border;
 			}
 
+			const adjust = (elem, isAdjusted) => {
+				if (isAdjusted) {
+					elem.classList.remove("not-adjusted");
+					elem.classList.add("adjusted");
+				} else {
+					elem.classList.add("not-adjusted");
+					elem.classList.remove("adjusted");
+				}
+			}
+
 			if (parentSize >= childrenSize) {
-				parent.style.flexDirection = (xAxis ? "row" : "column");
+				adjust(parent, false);
 			} else {
-				parent.style.flexDirection = (xAxis ? "column" : "row") + (reverse ? "-reverse" : "");
+				adjust(parent, true);
 			}
 		}
 	};

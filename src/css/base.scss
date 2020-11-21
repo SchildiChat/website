@@ -129,13 +129,8 @@ div.page-title {
 .screenshot-container {
     display: flex;
     justify-content: space-between;
-    max-width: 97%;
     margin-left: auto;
     margin-right: auto;
-
-    img {
-        max-width: 100%;
-    }
 }
 
 .phone-screenshot {

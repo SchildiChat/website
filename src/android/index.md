@@ -11,7 +11,7 @@ direct_download_app_name: SchildiChat
 github_src_link: https://github.com/SpiritCroc/SchildiChat-android
 ---
 
-SchildiChat is an Android Matrix Client based on [Element](https://github.com/vector-im/riotX-android).
+SchildiChat for Android is a Matrix Client based on [Element Android](https://github.com/vector-im/riotX-android).
 
 Compared to the Element app, SchildiChat features following changes:
 - Unified chat list for both direct and group chats

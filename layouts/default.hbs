@@ -2,11 +2,6 @@
 layout: base.hbs
 ---
 
-{{> magic_site_title }}
-
-{{#unless hide_page_title}}
-{{> header_separator }}
-{{> page_title }}
-{{/unless}}
+<h1>{{ title }}</h1>
 
 {{{ contents }}}

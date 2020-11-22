@@ -20,6 +20,7 @@
     "metalsmith-favicons": ">=1.0.0",
     "metalsmith-ignore": ">=1.0.0",
     "metalsmith-in-place": ">=4.4.1",
+    "metalsmith-inline-svg": "^0.1.4",
     "metalsmith-layouts": ">=2.3.1",
     "metalsmith-nested": ">=0.3.8",
     "metalsmith-prefixoid": ">=1.0.3",

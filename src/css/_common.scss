@@ -49,6 +49,12 @@ img {
     height: auto;
 }
 
+.icon {
+    height: 1.2em;
+    width: 1.2em;
+    margin-right: .5em;
+}
+
 .site-nav {
     overflow-x: hidden;
     width: 100%;
@@ -78,6 +84,14 @@ img {
         margin-top: -.5em;
         margin-bottom: -.5em;
     }
+}
+
+%bar-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-content {
@@ -115,10 +129,9 @@ img {
 }
 
 .nav-link {
-    text-decoration: none;
+    @extend %bar-link;
     margin-top: .6rem;
     margin-left: 2rem;
-    font-weight: bold;
 
     &.active {
         color: $accent;
@@ -166,8 +179,7 @@ footer {
 }
 
 .footer-link {
-    text-decoration: none;
+    @extend %bar-link;
     margin-top: .6rem;
     margin-left: 2rem;
-    font-weight: bold;
 }

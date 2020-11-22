@@ -44,6 +44,7 @@ in order to have them put into the devDependencies.
 - [ancestry](https://github.com/tests-always-included/metalsmith-ancestry)
 - [transform source files in place](https://github.com/metalsmith/metalsmith-in-place)
 - [use layouts as skeleton for source files](https://github.com/metalsmith/metalsmith-layouts)
+- [multi language](https://www.npmjs.com/package/metalsmith-multi-language)
 - [link prefixes](https://github.com/evoja/metalsmith-prefixoid)
 - [sass plugin](https://github.com/sounisi5011/metalsmith-dart-sass)
 
@@ -52,9 +53,9 @@ in order to have them put into the devDependencies.
 - [headings-identifier plugin](https://github.com/majodev/metalsmith-headings-identifier)
 - [generate navigation](https://github.com/unstoppablecarl/metalsmith-navigation) (maybe rather use ancestry to meet individual needs)
 - [inline svg](https://github.com/meatysolutions/metalsmith-inline-svg)
-- [multi language](https://www.npmjs.com/package/metalsmith-multi-language)
 - responsive images: [generate](https://github.com/AnthonyAstige/metalsmith-picset-generate) and [helper](https://github.com/AnthonyAstige/metalsmith-picset-handlebars-helper)
 - [optimize svgs](https://github.com/ben-eb/metalsmith-svgo)
+- [svg sprites](https://github.com/10xjs/metalsmith-svg-sprite)
 
 ### jstransformers
 Those are used by `metalsmith-in-place` and `metalsmith-layouts`, in our case:
@@ -67,7 +68,8 @@ They can be used together (e.g. `*.md.hbs` for handlebars --> markdown --> html)
 # TODO
 
 - Website privacy policy and impressum
-- Navigation
+- Back navigation from subpages
 - Contents
-- inline-svg
-- pass related links as array
+- Pass related links as {desc,link} array (append useful common set of variables, e.g. github_src_link)
+- postcss: minimize, vendor prefixes, path adjustment
+- Reconsider font stack (maybe just use that from Bootstrap)

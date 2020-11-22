@@ -44,7 +44,7 @@ in order to have them put into the devDependencies.
 - [ancestry](https://github.com/tests-always-included/metalsmith-ancestry)
 - [transform source files in place](https://github.com/metalsmith/metalsmith-in-place)
 - [use layouts as skeleton for source files](https://github.com/metalsmith/metalsmith-layouts)
-- [multi language](https://www.npmjs.com/package/metalsmith-multi-language)
+- [inline svg](https://github.com/meatysolutions/metalsmith-inline-svg)
 - [link prefixes](https://github.com/evoja/metalsmith-prefixoid)
 - [sass plugin](https://github.com/sounisi5011/metalsmith-dart-sass)
 
@@ -52,10 +52,15 @@ in order to have them put into the devDependencies.
 - [headings plugin](https://github.com/segmentio/metalsmith-headings)
 - [headings-identifier plugin](https://github.com/majodev/metalsmith-headings-identifier)
 - [generate navigation](https://github.com/unstoppablecarl/metalsmith-navigation) (maybe rather use ancestry to meet individual needs)
-- [inline svg](https://github.com/meatysolutions/metalsmith-inline-svg)
+- [multi language](https://www.npmjs.com/package/metalsmith-multi-language)
 - responsive images: [generate](https://github.com/AnthonyAstige/metalsmith-picset-generate) and [helper](https://github.com/AnthonyAstige/metalsmith-picset-handlebars-helper)
 - [optimize svgs](https://github.com/ben-eb/metalsmith-svgo)
-- [svg sprites](https://github.com/10xjs/metalsmith-svg-sprite)
+- svg sprites: [too old](https://github.com/10xjs/metalsmith-svg-sprite), [(too) new](https://github.com/gwillz/metalsmith-sprites)
+- [postcss](https://github.com/gwillz/metalsmith-postcss)
+- [handlebars alternative](https://github.com/gwillz/metalsmith-handlebars)
+- [stylelint](https://github.com/csmets/metalsmith-sass-lint) (or with postcss, but ditching sass or [using it through postcss]((https://github.com/jonathantneal/postcss-sass)) needed)
+- [metalsmith-rename](https://github.com/MoOx/metalsmith-rename)
+- [minify html](https://github.com/whymarrh/metalsmith-html-minifier) (look at minifyURLs option)
 
 ### jstransformers
 Those are used by `metalsmith-in-place` and `metalsmith-layouts`, in our case:
@@ -71,5 +76,6 @@ They can be used together (e.g. `*.md.hbs` for handlebars --> markdown --> html)
 - Back navigation from subpages
 - Contents
 - Pass related links as {desc,link} array (append useful common set of variables, e.g. github_src_link)
-- postcss: minimize, vendor prefixes, path adjustment
+- postcss: [minify](https://github.com/cssnano/cssnano) (or [clean-css](https://github.com/GoalSmashers/clean-css)), [vendor prefixes](https://github.com/postcss/autoprefixer), [path adjustment](https://github.com/postcss/postcss-url/issues/131), [responsive font sizes](https://github.com/twbs/rfs)
 - Reconsider font stack (maybe just use that from Bootstrap)
+- Minify html

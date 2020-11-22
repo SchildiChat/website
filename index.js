@@ -146,6 +146,7 @@ Metalsmith(__dirname)
     ]))
 
     .use(ignore(['**/*.fakechild']))
+    .use(ignore(['img/icons/orig/**']))
 
     // sass -> css
     .use(sass())

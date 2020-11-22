@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg10">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>OOjs_UI_icon_desktop</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs14" />
+  <title
+     id="title2">OOjs_UI_icon_desktop</title>
+  <path
+     id="path4"
+     d="m 3,3.5 c -0.5522847,0 -1,0.4477153 -1,1 v 12 c 0,0.552285 0.4477153,1 1,1 h 7 v 1 H 8 a 1,1 0 0 0 -1,1 v 1 h 10 v -1 a 1,1 0 0 0 -1,-1 h -2 v -1 h 7 c 0.552285,0 1,-0.447715 1,-1 v -12 c 0,-0.5522847 -0.447715,-1 -1,-1 z m 1,2 h 16 v 10 H 14 10 4 Z" />
+</svg>

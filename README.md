@@ -77,7 +77,7 @@ They can be used together (e.g. `*.md.hbs` for handlebars --> markdown --> html)
 - Back navigation from subpages
 - Contents
 - Pass related links as {desc,link} array (append useful common set of variables, e.g. github_src_link)
-- postcss: [path adjustment](https://github.com/postcss/postcss-url/issues/131), [responsive font sizes](https://github.com/twbs/rfs), maybe use [preset-env](https://github.com/csstools/postcss-preset-env) instead of autoprefixer (wait till updated)
+- postcss: [responsive font sizes](https://github.com/twbs/rfs), maybe use [preset-env](https://github.com/csstools/postcss-preset-env) instead of autoprefixer (wait till updated)
 - Reconsider font stack (maybe just use that from Bootstrap)
 - Minify html
 - Put everything into one css file to minimize size and unneeded extra connections (loading multiple css files if splitting css but using multiple includes in the html header): Instead of `stylesheet` use `css_scope` in frontmatter and put that as class to `body` so it can be used in css to scope stuff 

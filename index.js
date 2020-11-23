@@ -161,6 +161,10 @@ Metalsmith(__dirname)
     // postcss
     .use(postcss({
         plugins: {
+            'postcss-url': {
+                // see: https://github.com/postcss/postcss-url/issues/131
+                url: (asset) => (asset.url[0] === '/' ? site_url : '') + asset.url
+            },
             'autoprefixer': {},
             'postcss-csso': {}
         }

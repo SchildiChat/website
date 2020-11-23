@@ -6,8 +6,10 @@
   "devDependencies": {
     "@babel/core": ">=7.12.3",
     "@babel/preset-env": ">=7.12.1",
+    "@goodthnx/metalsmith-postcss": ">=1.1.0",
     "@goodthnx/metalsmith-webpack": ">=1.2.2",
     "@metalsmith/default-values": ">=3.0.2",
+    "autoprefixer": ">=10.0.2",
     "babel-loader": ">=8.2.1",
     "cheerio": ">=1.0.0-rc.3",
     "jstransformer-handlebars": ">=1.1.0",
@@ -20,10 +22,12 @@
     "metalsmith-favicons": ">=1.0.0",
     "metalsmith-ignore": ">=1.0.0",
     "metalsmith-in-place": ">=4.4.1",
-    "metalsmith-inline-svg": "^0.1.4",
+    "metalsmith-inline-svg": ">=0.1.4",
     "metalsmith-layouts": ">=2.3.1",
     "metalsmith-nested": ">=0.3.8",
     "metalsmith-prefixoid": ">=1.0.3",
+    "postcss": ">=8.1.9",
+    "postcss-csso": ">=5.0.0",
     "webpack": ">=5.6.0"
   },
   "resolutions": {

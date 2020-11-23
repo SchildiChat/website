@@ -1,4 +1,4 @@
-// Get our requirements, installed by npm
+// metalsmith plugins
 const Metalsmith = require('metalsmith');
 const ignore = require('metalsmith-ignore');
 const defaultValues = require('@metalsmith/default-values');
@@ -14,8 +14,10 @@ const inlineSVG = require('metalsmith-inline-svg');
 const externalLinks = require("./lib/metalsmith-external-links");
 const prefixoid = require('metalsmith-prefixoid');
 const sass = require('metalsmith-dart-sass');
+const postcss = require('@goodthnx/metalsmith-postcss');
 const webpack = require('@goodthnx/metalsmith-webpack')
 
+// prefix all absolute paths
 var site_url = ""
 if (process.argv.length > 2) {
     site_url = process.argv[2];
@@ -155,6 +157,14 @@ Metalsmith(__dirname)
 
     // sass -> css
     .use(sass())
+    
+    // postcss
+    .use(postcss({
+        plugins: {
+            'autoprefixer': {},
+            'postcss-csso': {}
+        }
+    }))
 
     // webpack for js
     .use(webpack({

@@ -89,8 +89,8 @@ a:not(.button) {
 }
 
 .button-default {
-    border: 1px solid $text_primary;
-    color: $text_primary;
+    border: 1px solid $text-primary;
+    color: $text-primary;
 
     &:hover {
         background-color: $accent;

@@ -68,7 +68,7 @@ div.pageheader {
 
 %content-separator {
     height: 1px;
-    background: $color_separator;
+    background: $color-separator;
 }
 
 .header-separator {
@@ -80,7 +80,7 @@ footer {
     padding-top: 1em;
     padding-bottom: 1em;
     width: 100%;
-    border-top: 1px solid $color_separator;
+    border-top: 1px solid $color-separator;
     margin-top: 2em;
 }
 

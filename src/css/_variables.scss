@@ -1,7 +1,8 @@
-$font_stack: Arial, sans-serif;
-$text_primary: #ffffff;
-$text_secondary: #b3b3b3;
-$color_separator: rgba(255, 255, 255, .5);
+$font-family-sans-serif: Arial, "Helvetica Neue", "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$text-primary: #ffffff;
+$text-secondary: #b3b3b3;
+$color-separator: rgba(255, 255, 255, .5);
 $bg-top-color: #0a5c7c;
 $bg-bottom-color: #001a2a;
 $bg-gradient: radial-gradient(circle farthest-corner at center top, $bg-top-color, $bg-bottom-color);

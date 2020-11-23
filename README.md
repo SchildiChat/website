@@ -20,7 +20,7 @@ make
 - [Step by step guide](https://metalsmith.io/step-by-step/#tl-dr)
 - [GitHub](https://github.com/segmentio/metalsmith)
 
-## Info about handlebars:
+## Info about handlebars
 
 - [handlebarsjs](https://handlebarsjs.com/)
 - [block helpers](https://handlebarsjs.com/guide/block-helpers.html#simple-iterators)
@@ -62,6 +62,7 @@ in order to have them put into the devDependencies.
 - [handlebars alternative](https://github.com/gwillz/metalsmith-handlebars)
 - [stylelint](https://github.com/csmets/metalsmith-sass-lint) (or with postcss, but ditching sass or [using it through postcss]((https://github.com/jonathantneal/postcss-sass)) needed)
 - [metalsmith-rename](https://github.com/MoOx/metalsmith-rename)
+- [minify images](https://github.com/ahmadnassri/metalsmith-imagemin) (this needs glob/pattern and decoupled dependencies added, orient on [gulp plugin](https://github.com/sindresorhus/gulp-imagemin))
 
 ### jstransformers
 Those are used by `metalsmith-in-place` and `metalsmith-layouts`, in our case:

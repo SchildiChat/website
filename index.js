@@ -14,6 +14,7 @@ const inlineSVG = require('metalsmith-inline-svg');
 const externalLinks = require("./lib/metalsmith-external-links");
 const prefixoid = require('metalsmith-prefixoid');
 const sass = require('metalsmith-dart-sass');
+const htmlMinifier = require("metalsmith-html-minifier");
 const postcss = require('@goodthnx/metalsmith-postcss');
 const webpack = require('@goodthnx/metalsmith-webpack')
 
@@ -152,8 +153,12 @@ Metalsmith(__dirname)
         }
     ]))
 
-    .use(ignore(['**/*.fakechild']))
-    .use(ignore(['img/icons/orig/**']))
+    // minify html
+    .use(htmlMinifier())
+
+    // ignore stuff
+    .use(ignore(['**/*.fakechild'])) // they only add to navigation, not needed as file anymore
+    .use(ignore(['img/icons/orig/**'])) // don't preserve (Inkscape) svgs
 
     // sass -> css
     .use(sass())

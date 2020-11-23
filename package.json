@@ -20,6 +20,7 @@
     "metalsmith-discover-helpers": ">=0.1.1",
     "metalsmith-discover-partials": ">=0.1.2",
     "metalsmith-favicons": ">=1.0.0",
+    "metalsmith-html-minifier": "^4.0.1",
     "metalsmith-ignore": ">=1.0.0",
     "metalsmith-in-place": ">=4.4.1",
     "metalsmith-inline-svg": ">=0.1.4",

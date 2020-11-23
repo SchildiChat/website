@@ -46,9 +46,10 @@ in order to have them put into the devDependencies.
 - [use layouts as skeleton for source files](https://github.com/metalsmith/metalsmith-layouts)
 - [inline svg](https://github.com/meatysolutions/metalsmith-inline-svg)
 - [link prefixes](https://github.com/evoja/metalsmith-prefixoid)
+- [minify html](https://github.com/whymarrh/metalsmith-html-minifier)
 - [sass plugin](https://github.com/sounisi5011/metalsmith-dart-sass)
 - [postcss](https://github.com/gwillz/metalsmith-postcss)
-- [webpack](https://github.com/gwillz/metalsmith-postcss)
+- [webpack](https://github.com/gwillz/metalsmith-webpack)
 
 ### Interesting, but currently unused
 - [headings plugin](https://github.com/segmentio/metalsmith-headings)
@@ -61,7 +62,6 @@ in order to have them put into the devDependencies.
 - [handlebars alternative](https://github.com/gwillz/metalsmith-handlebars)
 - [stylelint](https://github.com/csmets/metalsmith-sass-lint) (or with postcss, but ditching sass or [using it through postcss]((https://github.com/jonathantneal/postcss-sass)) needed)
 - [metalsmith-rename](https://github.com/MoOx/metalsmith-rename)
-- [minify html](https://github.com/whymarrh/metalsmith-html-minifier) (look at minifyURLs option)
 
 ### jstransformers
 Those are used by `metalsmith-in-place` and `metalsmith-layouts`, in our case:
@@ -79,5 +79,4 @@ They can be used together (e.g. `*.md.hbs` for handlebars --> markdown --> html)
 - Pass related links as {desc,link} array (append useful common set of variables, e.g. github_src_link)
 - postcss: [responsive font sizes](https://github.com/twbs/rfs), maybe use [preset-env](https://github.com/csstools/postcss-preset-env) instead of autoprefixer (wait till updated)
 - Reconsider font stack (maybe just use that from Bootstrap)
-- Minify html
 - Put everything into one css file to minimize size and unneeded extra connections (loading multiple css files if splitting css but using multiple includes in the html header): Instead of `stylesheet` use `css_scope` in frontmatter and put that as class to `body` so it can be used in css to scope stuff 

@@ -86,6 +86,26 @@ img {
     }
 }
 
+@mixin spaced-wrapping-flex-row($top, $left) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -$top;
+    margin-left: -$left;
+
+    > * {
+        margin-top: $top;
+        margin-left: $left;
+    }
+}
+
+%bar-links {
+    @include spaced-wrapping-flex-row(.6rem, 2rem);
+
+    justify-content: center;
+    text-align: center;
+}
+
 %bar-link {
     display: flex;
     flex-direction: row;
@@ -94,20 +114,12 @@ img {
     font-weight: bold;
 }
 
-.nav-content {
-    display: flex;
-    flex-direction: row;
+@mixin bar-content($top, $left) {
+    @include spaced-wrapping-flex-row($top, $left);
+    
     justify-content: space-around;
-    flex-wrap: wrap;
     align-items: center;
     text-align: center;
-    margin-top: -1.5rem;
-    margin-left: -4rem;
-
-    > * {
-        margin-top: 1.5rem;
-        margin-left: 4rem;
-    }
 
     &.not-adjusted {
         justify-content: space-between;
@@ -118,20 +130,16 @@ img {
     }
 }
 
+.nav-content {
+    @include bar-content(1.5rem, 4rem);
+}
+
 .nav-links {
-    margin-top: -.6rem;
-    margin-left: -2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
+    @extend %bar-links;
 }
 
 .nav-link {
     @extend %bar-link;
-    margin-top: .6rem;
-    margin-left: 2rem;
 
     &.active {
         color: $accent;
@@ -145,23 +153,9 @@ footer {
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    @include bar-content(1rem, 4rem);
+
     flex-wrap: wrap-reverse;
-    align-items: center;
-    text-align: center;
-    margin-top: -1rem;
-    margin-left: -4rem;
-
-    > * {
-        margin-top: 1rem;
-        margin-left: 4rem;
-    }
-
-    &.not-adjusted {
-        justify-content: space-between;
-    }
 
     &.adjusted {
         flex-direction: column-reverse;
@@ -169,17 +163,9 @@ footer {
 }
 
 .footer-links {
-    margin-top: -.6rem;
-    margin-left: -2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+    @extend %bar-links;
 }
 
 .footer-link {
     @extend %bar-link;
-    margin-top: .6rem;
-    margin-left: 2rem;
 }

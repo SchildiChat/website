@@ -2,12 +2,12 @@
 layout: base.hbs
 ---
 
-<div class="error container">
+<main class="error container">
     <h1>Error{{#if error_number}} {{error_number}}{{/if}}</h1>
 
-    {{#if error_name}}<h2>{{error_name}}</h2>{{/if}}
-
-    <img src="/img/SchildiChat_nopadding.svg" alt="{{error_name}}"/>
+    {{#if error_description}}<h2>{{error_description}}</h2>{{/if}}
 
     {{{ contents }}}
-</div>
+
+    <img src="/img/turtle_error.png" alt="{{#if error_description}}{{error_description}}{{else}}Error{{/if}}"/>
+</main>

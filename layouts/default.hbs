@@ -2,6 +2,12 @@
 layout: base.hbs
 ---
 
-{{> page_header}}
+<main class="container">
+    {{> page_header}}
 
-{{{ contents }}}
+    {{{ contents }}}
+
+    {{#if overview_list}}
+    {{> content_list }}
+    {{/if}}
+</main>

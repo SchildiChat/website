@@ -1,5 +1,29 @@
 @use 'base';
 
-.main {
+.error {
     text-align: center;
+
+    h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin: 0;
+        font-style: italic;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    h1, h2 {
+        color: #ac1500;
+    }
+
+    img {
+        width: 40em;
+        margin-top: 2em;
+    }
 }

@@ -56,15 +56,17 @@ Metalsmith(__dirname)
     // frontmatter (thing in markdown before actual markdown) default values
     .use(defaultValues([
         {
-            pattern: '**/*.{html,md,hbs,md.hbs,fakechild}',
+            pattern: ['**/*.{html,md,hbs,md.hbs,fakechild}', '!error/**/*'],
             defaults: site_default_params
         },
         {
             pattern: 'error/**/*',
-            defaults: {
+            defaults: Object.assign({}, site_default_params, {
+                title: "Error",
+                layout: 'error.hbs',
+                stylesheet: 'error.css',
                 nav_show: false,
-                is_subpage: false,
-            }
+            })
         }
     ]))
 
@@ -166,7 +168,7 @@ Metalsmith(__dirname)
 
     // ignore stuff
     .use(ignore(['**/*.fakechild'])) // they only add to navigation, not needed as file anymore
-    .use(ignore(['img/icons/orig/**'])) // don't preserve (Inkscape) svgs
+    .use(ignore(['**/img/**/orig/**'])) // don't preserve original images not needed in production
 
     // sass -> css
     .use(sass())

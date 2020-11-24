@@ -1,10 +1,10 @@
 ---
-title: "SchildiChat for Android privacy policy"
+title: "Privacy Policy"
 nav_name: "Privacy policy"
 hide_page_title: true
 ---
 
-# Privacy Policy (last updated on September 3th, 2020)
+_(Last updated on September 3th, 2020)_
 
 SchildiChat will be referenced in the later context as "the app".
 

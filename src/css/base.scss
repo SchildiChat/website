@@ -49,6 +49,62 @@ main {
     overflow-x: auto;
 }
 
+.page-header {
+    font-size: 2em;
+    color: $accent;
+
+    h1 {
+        font-size: 1.1em;
+        margin: 0;
+        color: inherit;
+        line-height: 1;
+    }
+
+    .nav-back {
+        font-size: .7em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        color: inherit;
+        font-style: italic;
+        line-height: 1;
+        margin-top: .2em;
+
+        .icon-wrapper {
+            height: 1em;
+            padding-right: .2em;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                height: 60%;
+                width: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-right: auto;
+                margin-left: 0;
+            }
+        }
+
+        a {
+            &:link, &:visited {
+                color: $accent;
+                text-decoration: none;
+            }
+        
+            &:hover {
+                color: $accent;
+                text-decoration: underline;
+            }
+        
+            &:active {
+                color: $active;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 div.siteheader {
     font-size: 2.5em;
     margin-bottom: 0.2em;

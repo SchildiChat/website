@@ -1,0 +1,15 @@
+{{#if is_subpage}}
+    {{#if show_link_to_parent}}
+        {{#with ancestry.parent}}
+            <div class="nav-back">
+                <div class="icon-wrapper">
+                    <img src="/img/icons/back-16.svg" class="icon">
+                </div>
+                <div>
+                    <a href="{{uri}}">{{title}}</a>
+                    {{> nav_back}}
+                </div>
+            </div>
+        {{/with}}
+    {{/if}}
+{{/if}}

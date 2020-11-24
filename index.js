@@ -66,6 +66,7 @@ Metalsmith(__dirname)
                 layout: 'error.hbs',
                 stylesheet: 'error.css',
                 nav_show: false,
+                show_link_to_parent: false,
             })
         }
     ]))

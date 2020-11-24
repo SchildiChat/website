@@ -1,14 +1,10 @@
 ---
 permalink: false
-needs_link_to_top: false
+show_link_to_parent: false
 layout: error.hbs
 stylesheet: error.css
+error_number: 404
+error_description: Not found
 ---
-
-# 404
-
-## Page not found
-
-<img src="/SchildiChat.svg" alt="Forbidden"/>
 
 No turtle found at this location!

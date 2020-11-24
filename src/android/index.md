@@ -2,7 +2,7 @@
 title: SchildiChat for Android
 nav_name: Android
 order_id: 10
-main_page: true
+is_subpage: false
 layout: 'default.hbs'
 overview_list: true
 overview_additional_links: true

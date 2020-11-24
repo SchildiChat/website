@@ -13,32 +13,29 @@ const layouts = require('metalsmith-layouts');
 const inlineSVG = require('metalsmith-inline-svg');
 const externalLinks = require("./lib/metalsmith-external-links");
 const prefixoid = require('metalsmith-prefixoid');
-const sass = require('metalsmith-dart-sass');
 const htmlMinifier = require("metalsmith-html-minifier");
+const sass = require('metalsmith-dart-sass');
 const postcss = require('@goodthnx/metalsmith-postcss');
 const webpack = require('@goodthnx/metalsmith-webpack')
 
 // prefix all absolute paths
-var site_url = ""
+var urlPrefix = ""
 if (process.argv.length > 2) {
-    site_url = process.argv[2];
+    urlPrefix = process.argv[2];
 }
-site_url = site_url.replace(/\/?$/, ""); // enforce no ending slash
+urlPrefix = urlPrefix.replace(/\/?$/, ""); // enforce no ending slash
 
 var site_default_params = {
     title: "SchildiChat",
-    description: "SchildiChat matrix messenger",
     layout: 'default.hbs',
     stylesheet: 'base.css',
-    copyright_date: new Date().getFullYear(),
     nav_show: true,
+    is_subpage: true,
+    show_link_to_parent: true,
     parent_subpages: false,
-    main_page: false,
-    needs_link_to_top: true,
     order_id: 50,
     overview_list: false,
-    hide_page_title: false,
-    nav_show: true
+    hide_page_title: false
 }
 
 // Run Metalsmith in the current directory.
@@ -48,7 +45,10 @@ var site_default_params = {
 Metalsmith(__dirname)
 
     .metadata({
-        site_url: site_url
+        site_name: "SchildiChat",
+        site_description: "SchildiChat matrix messenger",
+        url_prefix: urlPrefix,
+        copyright_date: new Date().getFullYear()
     })
 
     .use(ignore(['**/.gitignore']))
@@ -61,7 +61,10 @@ Metalsmith(__dirname)
         },
         {
             pattern: 'error/**/*',
-            defaults: { nav_show: false }
+            defaults: {
+                nav_show: false,
+                is_subpage: false,
+            }
         }
     ]))
 
@@ -131,27 +134,27 @@ Metalsmith(__dirname)
 
     .use(prefixoid([
         {
-            prefix: site_url,
+            prefix: urlPrefix,
             convert_relatives: false,
             tag: 'link',
             attr: 'href'
         }, {
-            prefix: site_url,
+            prefix: urlPrefix,
             convert_relatives: false,
             tag: 'a',
             attr: 'href'
         }, {
-            prefix: site_url,
+            prefix: urlPrefix,
             convert_relatives: false,
             tag: 'object',
             attr: 'data'
         }, {
-            prefix: site_url,
+            prefix: urlPrefix,
             convert_relatives: false,
             tag: 'img',
             attr: 'src'
         }, {
-            prefix: site_url,
+            prefix: urlPrefix,
             convert_relatives: false,
             tag: 'script',
             attr: 'src'
@@ -173,7 +176,7 @@ Metalsmith(__dirname)
         plugins: {
             'postcss-url': {
                 // see: https://github.com/postcss/postcss-url/issues/131
-                url: (asset) => (asset.url[0] === '/' ? site_url : '') + asset.url
+                url: (asset) => (asset.url[0] === '/' ? urlPrefix : '') + asset.url
             },
             'autoprefixer': {},
             'postcss-csso': {}

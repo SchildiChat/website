@@ -1,5 +1,6 @@
 ---
 nav_name: Web
+is_subpage: false
 order_id: 20
 uri: 'https://app.schildi.chat'
 ---

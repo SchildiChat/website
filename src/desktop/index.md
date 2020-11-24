@@ -2,7 +2,7 @@
 title: SchildiChat Desktop
 nav_name: Desktop
 order_id: 15
-main_page: true
+is_subpage: false
 layout: 'default.hbs'
 overview_list: true
 overview_additional_links: true

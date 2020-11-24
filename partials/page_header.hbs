@@ -1,0 +1,11 @@
+<header class="page-header">
+    <h1>{{title}}</h1>
+
+    {{#if is_subpage}}
+        {{#if show_link_to_parent}}
+            {{#with ancestry.parent}}
+                &lt;&lt;&nbsp;<a href="{{uri}}">{{title}}</a>
+            {{/with}}
+        {{/if}}
+    {{/if}}
+</header>

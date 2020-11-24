@@ -2,8 +2,12 @@
 layout: base.hbs
 ---
 
-{{> site_title }}
+<div class="error container">
+    <h1>Error{{#if error_number}} {{error_number}}{{/if}}</h1>
 
-{{> header_separator }}
+    {{#if error_name}}<h2>{{error_name}}</h2>{{/if}}
 
-{{{ contents }}}
+    <img src="/img/SchildiChat_nopadding.svg" alt="{{error_name}}"/>
+
+    {{{ contents }}}
+</div>

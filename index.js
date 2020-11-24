@@ -150,6 +150,11 @@ Metalsmith(__dirname)
             convert_relatives: false,
             tag: 'img',
             attr: 'src'
+        }, {
+            prefix: site_url,
+            convert_relatives: false,
+            tag: 'script',
+            attr: 'src'
         }
     ]))
 

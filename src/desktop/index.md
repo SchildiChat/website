@@ -9,7 +9,7 @@ overview_additional_links: true
 github_src_link: https://github.com/SchildiChat/schildichat-desktop
 ---
 
-SchildiChat-Desktop is a fork of [Element-Web](https://github.com/vector-im/element-web)/[-Desktop](https://github.com/vector-im/element-desktop).
+SchildiChat-Desktop is a fork of Element [Web](https://github.com/vector-im/element-web)/[Desktop](https://github.com/vector-im/element-desktop).
 
 The most important changes of SchildiChat-Desktop compared to Element are:
 - A unifed chat list for both direct and group chats

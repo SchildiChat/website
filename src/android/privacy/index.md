@@ -3,7 +3,7 @@ title: "Privacy Policy"
 nav_name: "Privacy policy"
 ---
 
-_(last updated on September 3th, 2020)_
+_Last updated: September 3th, 2020_
 
 SchildiChat will be referenced in the later context as "the app".
 

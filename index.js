@@ -32,10 +32,10 @@ var site_default_params = {
     nav_show: true,
     is_subpage: true,
     show_link_to_parent: true,
-    parent_subpages: false,
     order_id: 50,
-    overview_list: false,
-    hide_page_title: false
+    show_related_links: true,
+    show_subpages_in_related_links: true,
+    show_in_related_links: true
 }
 
 // Run Metalsmith in the current directory.
@@ -67,6 +67,7 @@ Metalsmith(__dirname)
                 stylesheet: 'error.css',
                 nav_show: false,
                 show_link_to_parent: false,
+                show_related_links: false,
             })
         }
     ]))

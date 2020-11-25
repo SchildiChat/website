@@ -1,0 +1,41 @@
+{{#if show_related_links}}
+    <h2>
+        {{#ifEquals lang "de"}}
+            Weiterführende Links
+        {{else}}
+            Related links
+        {{/ifEquals}}
+    </h2>
+
+    <ul>
+        {{#if show_subpages_in_related_links}}
+            {{#ancestry.children}}
+                {{#if show_in_related_links}}
+                    <li>
+                        <a class="content-list-link" href="{{uri}}">{{nav_name}}</a>
+                    </li>
+                {{/if}}
+            {{/ancestry.children}}
+        {{/if}}
+
+        {{#related_links}}
+            <li>
+                <a class="content-list-link" href="{{url}}">{{desc}}</a>
+            </li>
+        {{/related_links}}
+
+        {{#if github_src_link}}
+            {{#if github_releases}}
+                <li>
+                    <a class="content-list-link" href="{{github_src_link}}/releases">{{#ifEquals lang "de"}}Alle Downloads{{else}}All downloads{{/ifEquals}} (GitHub)</a>
+                </li>
+            {{/if}}
+            <li>
+                <a class="content-list-link" href="{{github_src_link}}/issues">{{#ifEquals lang "de"}}Fehler melden{{else}}Bug tracker{{/ifEquals}} (GitHub)</a>
+            </li>
+            <li>
+                <a class="content-list-link" href="{{github_src_link}}">{{#ifEquals lang "de"}}Quellcode{{else}}Source code{{/ifEquals}} (GitHub)</a>
+            </li>
+        {{/if}}
+    </ul>
+{{/if}}

@@ -3,9 +3,6 @@ title: SchildiChat for Android
 nav_name: Android
 order_id: 10
 is_subpage: false
-layout: 'default.hbs'
-overview_list: true
-overview_additional_links: true
 fdroid_download_link: https://f-droid.org/de/packages/de.spiritcroc.riotx/
 direct_download_app_name: SchildiChat
 github_src_link: https://github.com/SpiritCroc/SchildiChat-android

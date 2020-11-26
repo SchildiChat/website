@@ -5,7 +5,7 @@ order_id: 10
 is_subpage: false
 fdroid_download_link: https://f-droid.org/de/packages/de.spiritcroc.riotx/
 direct_download_app_name: SchildiChat
-github_src_link: https://github.com/SpiritCroc/SchildiChat-android
+github_src_link: https://github.com/SchildiChat/SchildiChat-android
 ---
 
 SchildiChat for Android is a Matrix Client based on [Element Android](https://github.com/vector-im/riotX-android).

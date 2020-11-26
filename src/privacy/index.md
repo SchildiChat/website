@@ -2,6 +2,8 @@
 title: "Privacy notice"
 nav_show: false
 show_link_to_parent: false
+show_in_footer: true
+order_id: 20
 ---
 
 This website is hosted on a [Hetzner cloud](https://www.hetzner.com/cloud) server.  

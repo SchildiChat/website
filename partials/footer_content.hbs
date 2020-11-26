@@ -1,8 +1,9 @@
 <div class="footer-copyright">&copy; {{copyright_date}} {{site_name}}</div>
 <div class="footer-links-holder">
   <div class="footer-links">
-    <a href="/imprint" class="footer-link">Imprint</a>
-    <a href="/privacy" class="footer-link">Privacy policy</a>
+    {{#footer_links}}
+      <a href="{{uri}}" class="footer-link">{{nav_name}}</a>
+    {{/footer_links}}
     <a href="https://github.com/SchildiChat" class="footer-link"><img src="/img/icons/github-16.svg" class="icon">Code</a>
   </div>
 </div>

@@ -74,7 +74,7 @@ They can be used together (e.g. `*.md.hbs` for handlebars --> markdown --> html)
 
 # TODO
 
-- Website privacy policy and contact with email instead imprint
+- Better contact page
 - Heading margins
 - Contents
 - postcss: [responsive font sizes](https://github.com/twbs/rfs), maybe use [preset-env](https://github.com/csstools/postcss-preset-env) instead of autoprefixer (wait till updated)

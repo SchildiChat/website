@@ -130,6 +130,9 @@ Metalsmith(__dirname)
     .use(inlineSVG({
         selector: 'img.icon'
     }))
+    .use(inlineSVG({
+        selector: 'img.svg-embedded'
+    }))
 
     // After layouts, these might add some links as well
     .use(externalLinks({

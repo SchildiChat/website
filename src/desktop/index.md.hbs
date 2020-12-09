@@ -22,8 +22,31 @@ The most important changes of SchildiChat-Desktop compared to Element are:
 </div>
 
 ## Where can I get it?
-- [Downloads for Desktop]({{github_src_link}}/releases)  
+- [All downloads for Desktop]({{github_src_link}}/releases) (including old versions and **Windows** packages)  
 - [https://app.schildi.chat/](https://app.schildi.chat/) (hosted web variant)
+- As installable package through a **Linux** package manager (see instructions below)
+
+### apt <small>(e.g. Debian, Ubuntu, ...)</small>
+```
+sudo apt install -y wget apt-transport-https
+wget -O - https://apt.supercable.onl/super-apt-repo.key | sudo apt-key add - 
+echo "deb https://apt.supercable.onl/debian/ all main" | sudo tee /etc/apt/sources.list.d/super-apt-repo.list
+sudo apt update
+sudo apt install schildichat-desktop
+```
+
+### AUR <small>(e.g. Arch Linux, Manjaro, ...)</small>
+SchildiChat can be installed from the [AUR](https://wiki.archlinux.org/index.php/Arch_User_Repository):
+```
+yay -S schildichat-desktop-bin # or similar
+```
+
+### Flatpak
+SchildiChat is distributed on [Flathub](https://flathub.org/apps/details/chat.schildi.desktop):
+```
+flatpak install flathub chat.schildi.desktop
+```
+
 
 ## Get in touch
 Feel free to [join the discussion on matrix](https://matrix.to/#/#schildichat-web:matrix.org).

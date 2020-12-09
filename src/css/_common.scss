@@ -55,6 +55,29 @@ img {
     margin-right: .5em;
 }
 
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    font-size: .875em;
+    font-family: $font-family-monospace;
+    border: 1px solid $color-separator;
+    background: rgba(black, .1);
+    padding: .5rem;
+
+    code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal;
+    }
+}
+
+code {
+    font-size: .875em;
+    word-wrap: break-word;
+}
+
 .site-nav {
     overflow-x: hidden;
     width: 100%;

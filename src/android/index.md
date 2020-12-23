@@ -42,10 +42,17 @@ If you prefer the **variant that features push notifications**, you can get it f
 
 ### Google Play Store
 
-At the moment, SchildiChat is not available from the Google Play Store in order to avoid legal complications caused by the US export regulations in regard to software with inbuilt encryption.
+At the moment, SchildiChat is not available from the Google Play Store in order to avoid legal complications\*.
 
-You probably want to use the variant from the [SpiritCroc F-Droid repository](install-from-sc-fdroid) instead.
+You probably want to use the SchildiChat variant from the [SpiritCroc F-Droid repository](install-from-sc-fdroid).
 In case SchildiChat becomes available in the Play Store in the future, this version should allow for an upgrade without the need to re-install the app.
+
+<small>
+*
+SchildiChat includes strong encryption algorithms, and the Google Play Store servers are located in the USA, so SchildiChat <a href="https://www.bis.doc.gov/index.php/encryption-and-export-administration-regulations-ear">requires an exempt from US export regulations</a> (which requires annual mails with a certain content to various authorities).
+Since we are not fluent in legalese, we want to avoid possible consequences caused by incorrect handling of the exemption process.
+Accordingly, you can get SchildiChat only from non-US servers for now.
+</small>
 
 
 ### Direct download

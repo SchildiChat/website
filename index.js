@@ -25,6 +25,8 @@ if (process.argv.length > 2) {
 }
 urlPrefix = urlPrefix.replace(/\/?$/, ""); // enforce no ending slash
 
+var svgFavicon = 'img/SchildiChat_nopadding.svg';
+
 var site_default_params = {
     title: "SchildiChat",
     layout: 'default.hbs',
@@ -48,6 +50,7 @@ Metalsmith(__dirname)
         site_name: "SchildiChat",
         site_description: "SchildiChat is a Matrix client based on Element with a more traditional instant messaging experience.",
         url_prefix: urlPrefix,
+        svg_favicon: svgFavicon,
         copyright_date: new Date().getFullYear()
     })
 
@@ -73,7 +76,7 @@ Metalsmith(__dirname)
     ]))
 
     .use(favicons({
-        src: 'img/SchildiChat_nopadding.svg',
+        src: svgFavicon,
         dest: 'img/favicons/',
         icons: {
             favicons: true

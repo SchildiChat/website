@@ -46,7 +46,7 @@ Metalsmith(__dirname)
 
     .metadata({
         site_name: "SchildiChat",
-        site_description: "SchildiChat matrix messenger",
+        site_description: "SchildiChat is a Matrix client based on Element with a more traditional instant messaging experience.",
         url_prefix: urlPrefix,
         copyright_date: new Date().getFullYear()
     })

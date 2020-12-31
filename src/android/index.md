@@ -62,6 +62,19 @@ If you don't want to install F-Droid, you can also download the latest version
 - **without** push notifications from the [official F-Droid repository](https://f-droid.org/en/packages/de.spiritcroc.riotx/) _(scroll down)_
 
 
+### Test versions
+
+If you want to help testing new releases and don't mind some extra bugs,
+you can get beta-versions for both the Google- and the FOSS-variant from the [SpiritCroc test-builds F-Droid repository](https://s2.spiritcroc.de/testing/fdroid/repo?fingerprint=52d03f2fab785573bb295c7ab270695e3a1bdd2adc6a6de8713250b33f231225).
+
+The beta releases come with their own package-id, so you can install both alongside to the stable version.
+After adding above repo to F-Droid, you should be able to find following apps:
+
+- SchildiChat.Beta[g]: This is the Google variant with push notifications,
+- SchildiChat.Beta[f]: This is the FOSS variant, as found in the official F-Droid repository.
+
+When reporting bugs related to test versions (and thus not existing on stable versions), make sure to provide both the version-name and the version-code, as found in the app's about screen!
+
+
 ## Get in touch
 Feel free to [join the discussion on matrix](https://matrix.to/#/#schildichat-android:matrix.org).
-

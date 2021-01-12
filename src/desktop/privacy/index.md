@@ -1,1 +1,0 @@
-../../android/privacy/index.md

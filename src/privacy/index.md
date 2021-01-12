@@ -8,5 +8,5 @@ order_id: 20
 
 This website is hosted on a [Hetzner cloud](https://www.hetzner.com/cloud) server.  
 It's technically inevitable to obtain some information like your IP address and the time of access.  
-This data is not processed in any technically unnecessary manner.  
+This data is not processed in any technically unnecessary manner except for statistical analysis.  
 No cookies are set. 🍪😋

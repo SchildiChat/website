@@ -187,6 +187,10 @@ div.page-title {
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+
+    img {
+        width: 100%; // fix ie
+    }
 }
 
 .phone-screenshot {

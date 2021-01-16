@@ -73,7 +73,7 @@ After adding above repo to F-Droid, you should be able to find following apps:
 - SchildiChat.Beta[g]: This is the Google variant with push notifications,
 - SchildiChat.Beta[f]: This is the FOSS variant, as found in the official F-Droid repository.
 
-When reporting bugs related to test versions (and thus not existing on stable versions), make sure to provide both the version-name and the version-code, as found in the app's about screen!
+When reporting bugs related to test versions (and thus not existing on stable versions), make sure to mention the full version name, as found in the app's about screen!
 
 
 ## Get in touch

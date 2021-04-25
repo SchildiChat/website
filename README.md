@@ -1,6 +1,6 @@
 # schildichat-website
 
-This project builds schildi.chat using [metalsmith](https://metalsmith.io/).
+This project builds [schildi.chat](https://schildi.chat) using [metalsmith](https://metalsmith.io/).
 
 ## Prepare build
 

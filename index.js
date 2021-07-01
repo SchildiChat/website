@@ -6,6 +6,10 @@ const favicons = require('metalsmith-favicons');
 const discoverHelpers = require('metalsmith-discover-helpers');
 const nested = require('metalsmith-nested');
 const discoverPartials = require('metalsmith-discover-partials');
+const sass = require('metalsmith-dart-sass');
+const postcss = require('@goodthnx/metalsmith-postcss');
+const webpack = require('@goodthnx/metalsmith-webpack')
+const contenthash = require('metalsmith-contenthash');
 const ancestry = require("metalsmith-ancestry");
 const autoDefaults = require("./lib/metalsmith-auto-defaults");
 const inPlace = require('metalsmith-in-place');
@@ -14,9 +18,6 @@ const inlineSVG = require('metalsmith-inline-svg');
 const externalLinks = require("./lib/metalsmith-external-links");
 const prefixoid = require('metalsmith-prefixoid');
 const htmlMinifier = require("metalsmith-html-minifier");
-const sass = require('metalsmith-dart-sass');
-const postcss = require('@goodthnx/metalsmith-postcss');
-const webpack = require('@goodthnx/metalsmith-webpack')
 
 // prefix all absolute paths
 var urlPrefix = ""
@@ -99,6 +100,58 @@ Metalsmith(__dirname)
         pattern: /\.hbs$/
     }))
 
+    // sass -> css
+    .use(sass())
+    
+    // postcss
+    .use(postcss({
+        plugins: {
+            'postcss-url': {
+                // see: https://github.com/postcss/postcss-url/issues/131
+                url: (asset) => (asset.url[0] === '/' ? urlPrefix : '') + asset.url
+            },
+            'autoprefixer': {},
+            'postcss-csso': {}
+        }
+    }))
+
+    // webpack for js
+    .use(webpack({
+        pattern: 'js/bundle.js',
+        config: './webpack.config.js'
+    }))
+
+    // Prevent usage of cached files if they have been changed in between
+    .use(contenthash({
+    
+        // don't keep orignal untagged file
+        keep: false,
+        
+        // use sha256 for hashing
+        algorithm: 'sha256',
+        
+        // match static files
+        // uses multimatch  https://www.npmjs.com/package/multimatch
+        pattern: ['{js,css}/*'],
+        
+        // function for determining new filename
+        // default function uses only first 16 hexadecimal digits
+        rename: function(filepath, digest) {
+            
+            // we split at the first period, instead of extname
+            //  this is to handle .css.map
+            var ext = filepath.indexOf('.');
+            
+            return [
+                filepath.substring(0, ext),
+                '.', digest.substr(0, 16),
+                filepath.substring(ext),
+            ].join('');
+            
+        },
+        
+    }))
+
     // Ancestry allows access to parents and children.
     .use(ancestry({
         sortBy: ["order_id", "title"],
@@ -113,7 +166,8 @@ Metalsmith(__dirname)
                 .replace(/\.(md|hbs|md\.hbs)$/, ".html")
                 .replace(/(^|\/|\\)index.*$/, "$1")
                 .replace(/^\/?/, "/");
-        }
+        },
+        stylesheetPrefixPath: "css/"
     }))
 
     .use(inPlace({
@@ -177,27 +231,6 @@ Metalsmith(__dirname)
     // ignore stuff
     .use(ignore(['**/*.fakechild'])) // they only add to navigation, not needed as file anymore
     .use(ignore(['**/img/**/orig/**'])) // don't preserve original images not needed in production
-
-    // sass -> css
-    .use(sass())
-    
-    // postcss
-    .use(postcss({
-        plugins: {
-            'postcss-url': {
-                // see: https://github.com/postcss/postcss-url/issues/131
-                url: (asset) => (asset.url[0] === '/' ? urlPrefix : '') + asset.url
-            },
-            'autoprefixer': {},
-            'postcss-csso': {}
-        }
-    }))
-
-    // webpack for js
-    .use(webpack({
-        pattern: 'js/bundle.js',
-        config: './webpack.config.js'
-    }))
 
     // And tell Metalsmith to fire it all off.
     .build(function(err) {

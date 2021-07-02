@@ -91,10 +91,8 @@ code {
 .nav-brand {
     display: flex;
     align-items: center;
-    font-family: monospace;
-    font-size: 1.6em;
+    font-size: 1.2em;
     text-decoration: none;
-    letter-spacing: -1px;
 
     &:link, &:hover, &:active, &:visited {
         text-decoration: inherit;

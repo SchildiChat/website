@@ -32,32 +32,22 @@ Compared to the Element app, SchildiChat features following changes:
 ## Where can I get it?
 
 
+### Google Play Store
+
+You can find SchildiChat in the Google Play Store [here](https://play.google.com/store/apps/details?id=de.spiritcroc.riotx).
+
+
 ### F-Droid
 
 The **FOSS variant** (without closed-source code) is available from the [official F-Droid repository](https://f-droid.org/de/packages/de.spiritcroc.riotx/).
-However, this variant **does not allow for push notifications**, and thus **might** feature increased battery drain and a higher delay for delivering messages.
+However, this variant **does not allow for push notifications**, and thus might feature increased battery drain and a higher delay for delivering messages.
 
-If you prefer the **variant that features push notifications**, you can get it from the [SpiritCroc F-Droid repository](install-from-sc-fdroid).
-
-
-### Google Play Store
-
-At the moment, SchildiChat is not available from the Google Play Store in order to avoid legal complications\*.
-
-You probably want to use the SchildiChat variant from the [SpiritCroc F-Droid repository](install-from-sc-fdroid).
-In case SchildiChat becomes available in the Play Store in the future, this version should allow for an upgrade without the need to re-install the app.
-
-<small>
-*
-SchildiChat includes strong encryption algorithms, and the Google Play Store servers are located in the USA, so SchildiChat <a href="https://www.bis.doc.gov/index.php/encryption-and-export-administration-regulations-ear">requires an exempt from US export regulations</a> (which requires annual mails with a certain content to various authorities).
-Since we are not fluent in legalese, we want to avoid possible consequences caused by incorrect handling of the exemption process.
-Accordingly, you can get SchildiChat only from non-US servers for now.
-</small>
+If you prefer the **variant that features push notifications**, you can get it either from the [Google Play Store](https://play.google.com/store/apps/details?id=de.spiritcroc.riotx) or the [SpiritCroc F-Droid repository](install-from-sc-fdroid).
 
 
 ### Direct download
 
-If you don't want to install F-Droid, you can also download the latest version
+If neither Google Play nor F-Droid work for you, you can also download the latest version
 - **with** push notifications from the [SpiritCroc F-Droid repository](https://s2.spiritcroc.de/fdroid/SchildiChat.apk)
 - **without** push notifications from the [official F-Droid repository](https://f-droid.org/en/packages/de.spiritcroc.riotx/) _(scroll down)_
 

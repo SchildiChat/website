@@ -1,7 +1,8 @@
-_Last updated: April 25th, 2021_
+_Last updated: August 28th, 2021_
 
-SchildiChat will be referenced in the later context as "the app".
-"We", "us" and similar terms refer to the SchildiChat developer team.
+SchildiChat will be referenced in the later context as "the app".  
+"We", "us" and similar terms refer to the SchildiChat developer team.  
+"You", "the user" and similar terms refer to anybody using SchildiChat.  
 
 ## Understand how your data is used
 
@@ -18,8 +19,6 @@ Services using the Matrix protocol rely on Matrix homeservers which share user d
 
 - When you send messages or files in a room, a copy of the data is sent to all participants in the room.
   If these participants are registered on remote homeservers, your username, display name, messages and files may be replicated across each participating homeserver.
-
-- The developer of this app collects no personal (or other) information by means of this app.
 
 - Please refer to the privacy policy of your homeserver operator for details if you wish to request a removal of your data.
 
@@ -51,6 +50,26 @@ Bots and Widgets have access to the messages and files in rooms in which they p
 
 The app contains [Firebase Cloud Messaging](https://firebase.google.com/support/privacy/) services that comunicate with the server maintained by [The Matrix.org Foundation](https://matrix.org/legal/privacy-notice) and [Element](https://element.io/privacy) in order to provide efficient push notifications.
 Please refer to their respective privacy policies for further details.
+{{/if}}
+
+
+{{#if unifiedpush}}
+## UnifiedPush
+
+The app supports UnifiedPush. If the user installs a compatible [distributor application](https://unifiedpush.org/spec/definitions/), the app may share data with the respective chosen push provider to enable push notification functionality.
+Please refer to your push provider's privacy policy for further details.
+
+Furthermore, the SchildiChat team hosts a push gateway, which is used to translate UnifiedPush requests for the user's matrix homeserver.
+When using UnifiedPush, the push gateway server may thus receive following data, and store it in log files for a limited time:
+
+- The IP address of your device running SchildiChat
+- The user agent of your device running SchildiChat, which may feature information including (but not limited to) your SchildiChat version, Android version, and device model
+- The IP address of your homeserver
+- The home server software in use
+- Times of access
+- The actual content sent by the homeserver for push notifications. This usually only includes internal IDs required to identify the event which triggered the push notification, and should not include actual message content. Please refer to your homeserver's privacy policy for further details.
+
+For more information about UnifiedPush, please visit the [UnifiedPush website](https://unifiedpush.org/).
 {{/if}}
 
 {{#if rageshake}}

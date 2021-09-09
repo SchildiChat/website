@@ -39,9 +39,11 @@ You can find SchildiChat in the Google Play Store [here](https://play.google.com
 ### F-Droid
 
 The **FOSS variant** (without closed-source code) is available from the [official F-Droid repository](https://f-droid.org/de/packages/de.spiritcroc.riotx/).
-However, this variant **does not allow for push notifications**, and thus might feature increased battery drain and a higher delay for delivering messages.
+However, this variant **does not support Google/FCM push notifications**, and thus might feature increased battery drain and a higher delay for delivering messages.
+Since the official F-Droid repository can be slow for updates, you can also use the [SpiritCroc F-Droid repository](install-from-sc-fdroid-foss) to get new releases sooner.
 
-If you prefer the **variant that features push notifications**, you can get it either from the [Google Play Store](https://play.google.com/store/apps/details?id=de.spiritcroc.riotx) or the [SpiritCroc F-Droid repository](install-from-sc-fdroid).
+If you prefer the **variant that features push notifications**, you can get it either from the [Google Play Store](https://play.google.com/store/apps/details?id=de.spiritcroc.riotx) or the [SpiritCroc F-Droid repository](install-from-sc-fdroid-fcm).
+If you already installed SchildiChat from the Google Play Store, but want to update the app without re-installing using F-Droid, follow the instructions how to do this with the same repository [here](install-from-sc-fdroid).
 
 
 ### Direct download

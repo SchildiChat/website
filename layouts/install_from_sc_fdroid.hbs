@@ -30,7 +30,8 @@ First, reload F-Droid's app information by swiping down F-Droid's overview scree
 </p>
 
 <p>
-Then, search for {{app_title}}, or open <a href="https://f-droid.org/de/packages/{{app_id}}/">this link</a> in F-Droid.
+Then, search for {{app_title}}, or open <a href="https://f-droid.org/de/packages/{{app_id}}/">this link</a> using the F-Droid app.
+{{#if conflicts_other_repos}}
 Scroll down and expand the "Versions" section.
 There, expand the latest versions until you see one which says "Repository: SpiritCroc's Apps", and click the "Install" button to install it.
 </p>
@@ -39,4 +40,7 @@ There, expand the latest versions until you see one which says "Repository: Spir
 
 <p>
 For future updates, F-Droid will automatically use the same repository, so you don't need to worry about accidentally upgrading to a different version.
+{{else}}
+Finally, click install and that's it!
+{{/if}}
 </p>

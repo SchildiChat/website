@@ -31,40 +31,57 @@ Compared to the Element app, SchildiChat features following changes:
 ## Where can I get it?
 
 
-### Google Play Store
-
-You can find SchildiChat in the Google Play Store [here](https://play.google.com/store/apps/details?id=de.spiritcroc.riotx).
-
-
-### F-Droid
-
-The **FOSS variant** (without closed-source code) is available from the [official F-Droid repository](https://f-droid.org/de/packages/de.spiritcroc.riotx/).
-However, this variant **does not support Google/FCM push notifications**, and thus might feature increased battery drain and a higher delay for delivering messages.
-Since the official F-Droid repository can be slow for updates, you can also use the [SpiritCroc F-Droid repository](install-from-sc-fdroid-foss) to get new releases sooner.
-
-If you prefer the **variant that features push notifications**, you can get it either from the [Google Play Store](https://play.google.com/store/apps/details?id=de.spiritcroc.riotx) or the [SpiritCroc F-Droid repository](install-from-sc-fdroid-fcm).
-If you already installed SchildiChat from the Google Play Store, but want to update the app without re-installing using F-Droid, follow the instructions how to do this with the same repository [here](install-from-sc-fdroid).
+<a href="https://play.google.com/store/apps/details?id=de.spiritcroc.riotx" alt="Get it on Google Play" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200"></a>
+<a href="https://f-droid.org/packages/de.spiritcroc.riotx/" alt="Get it on F-Droid" target="_blank"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" width="200"></a>
 
 
-### Direct download
+SchildiChat comes in two variants:
 
-If neither Google Play nor F-Droid work for you, you can also download the latest version
-- **with** push notifications from the [SpiritCroc F-Droid repository](https://s2.spiritcroc.de/fdroid/SchildiChat.apk)
-- **without** push notifications from the [official F-Droid repository](https://f-droid.org/en/packages/de.spiritcroc.riotx/) _(scroll down)_
+- The **FCM** variant uses Google's FCM push notifications. If you have the Google Play Store installed on your device, this is likely the version that you want.
+- The **FOSS** (free and open source) variant does not include any proprietary libraries, and thus does not support Google's FCM push notifications. If you are particularly privacy-aware and want to avoid any contact with Google servers, this is likely the version that you want. However, depending on your setup, this version might result in a higher battery usage and delayed messages.
+
+While the variants differ in whether they support FCM push notifications, they both do support [UnifiedPush](https://unifiedpush.org/), which allows users to choose an alternative push provider. Please refer to the [UnifiedPush website](https://unifiedpush.org/) if you are interested in how to set this up.
+
+Depending on the installation method, you can get either stable releases only, or beta releases, if you want to help testing the latest features and don't mind some extra bugs.
+All official sources to install SchildiChat are listed in the following.
 
 
-### Test versions
+##### Easy installation
 
-If you want to help testing new releases and don't mind some extra bugs,
-you can get beta-versions for both the Google- and the FOSS-variant from the [SpiritCroc test-builds F-Droid repository](https://s2.spiritcroc.de/testing/fdroid/repo?fingerprint=52d03f2fab785573bb295c7ab270695e3a1bdd2adc6a6de8713250b33f231225).
+|Source|Variant|Notes|
+|------|-------|-----|
+|[Google Play Store](https://play.google.com/store/apps/details?id=de.spiritcroc.riotx)|<span class="badge fcm">FCM</span>||
+|[F-Droid](https://f-droid.org/de/packages/de.spiritcroc.riotx/)|<span class="badge foss">FOSS</span>|Built by the F-Droid team. Updates often delayed for a couple of days.|
+<p/>
 
-The beta releases come with their own package-id, so you can install both alongside to the stable version.
-After adding above repo to F-Droid, you should be able to find following apps:
 
-- SchildiChat.Beta[g]: This is the Google variant with push notifications,
-- SchildiChat.Beta[f]: This is the FOSS variant, as found in the official F-Droid repository.
+##### Fast stable updates from the *SpiritCroc F-Droid repo*
 
-When reporting bugs related to test versions (and thus not existing on stable versions), make sure to mention the full version name, as found in the app's about screen!
+|App name|Variant|Notes|
+|--------|-------|-----|
+|[SchildiChat[f]](install-from-sc-fdroid-foss)|<span class="badge foss">FOSS</span>||
+|[SchildiChat[g]](install-from-sc-fdroid-fcm)|<span class="badge fcm">FCM</span>||
+|[SchildiChat](install-from-sc-fdroid)|<span class="badge fcm">FCM</span>|Updates compatible with the version from Google Play Store.|
+<p/>
+
+
+##### Beta releases from the *SpiritCroc test-builds F-Droid repo*
+
+|App name|Variant|
+|--------|-------|
+|[SchildiChat.Beta[f]](https://s2.spiritcroc.de/testing/fdroid/repo?fingerprint=52d03f2fab785573bb295c7ab270695e3a1bdd2adc6a6de8713250b33f231225)|<span class="badge foss">FOSS</span>|
+|[SchildiChat.Beta[g]](https://s2.spiritcroc.de/testing/fdroid/repo?fingerprint=52d03f2fab785573bb295c7ab270695e3a1bdd2adc6a6de8713250b33f231225)|<span class="badge fcm">FCM</span>|
+<p/>
+
+
+##### Direct downloads for the latest stable version
+
+|App name|Variant|Notes|
+|--------|-------|-----|
+|[SchildiChat[f]](https://s2.spiritcroc.de/fdroid/SchildiChat[f].apk)|<span class="badge foss">FOSS</span>||
+|[SchildiChat[g]](https://s2.spiritcroc.de/fdroid/SchildiChat[g].apk)|<span class="badge fcm">FCM</span>||
+|[SchildiChat](https://s2.spiritcroc.de/fdroid/SchildiChat.apk)|<span class="badge fcm">FCM</span>|Updates compatible with the version from Google Play Store.|
+<p/>
 
 
 ## Get in touch

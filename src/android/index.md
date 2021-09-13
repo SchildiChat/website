@@ -28,7 +28,7 @@ Compared to the Element app, SchildiChat features following changes:
 </div>
 
 
-## Where can I get it?
+## Download
 
 
 <a href="https://play.google.com/store/apps/details?id=de.spiritcroc.riotx" alt="Get it on Google Play" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200"></a>
@@ -37,8 +37,8 @@ Compared to the Element app, SchildiChat features following changes:
 
 SchildiChat comes in two variants:
 
-- The **FCM** variant uses Google's FCM push notifications. If you have the Google Play Store installed on your device, this is likely the version that you want.
-- The **FOSS** (free and open source) variant does not include any proprietary libraries, and thus does not support Google's FCM push notifications. If you are particularly privacy-aware and want to avoid any contact with Google servers, this is likely the version that you want. However, depending on your setup, this version might result in a higher battery usage and delayed messages.
+- The <span class="badge fcm">FCM</span> variant uses Google's FCM push notifications. If you have the Google Play Store installed on your device, this is likely the version that you want.
+- The <span class="badge foss">FOSS</span> (free and open source) variant does not include any proprietary libraries, and thus does not support Google's FCM push notifications. If you are particularly privacy-aware and want to avoid any contact with Google servers, this is likely the version that you want. However, depending on your setup, this version might result in a higher battery usage and delayed messages.
 
 While the variants differ in whether they support FCM push notifications, they both do support [UnifiedPush](https://unifiedpush.org/), which allows users to choose an alternative push provider. Please refer to the [UnifiedPush website](https://unifiedpush.org/) if you are interested in how to set this up.
 
@@ -46,26 +46,28 @@ Depending on the installation method, you can get either stable releases only, o
 All official sources to install SchildiChat are listed in the following.
 
 
-##### Easy installation
+### Easy installation
 
-|Source|Variant|Notes|
-|------|-------|-----|
-|[Google Play Store](https://play.google.com/store/apps/details?id=de.spiritcroc.riotx)|<span class="badge fcm">FCM</span>||
-|[F-Droid](https://f-droid.org/de/packages/de.spiritcroc.riotx/)|<span class="badge foss">FOSS</span>|Built by the F-Droid team. Updates often delayed for a couple of days.|
+|Source|Variant|
+|------|-------|
+|[Google Play Store](https://play.google.com/store/apps/details?id=de.spiritcroc.riotx)|<span class="badge fcm">FCM</span>|
+|[F-Droid](https://f-droid.org/de/packages/de.spiritcroc.riotx/) (\*)|<span class="badge foss">FOSS</span>|
+(\*) Built by the F-Droid team. Updates often delayed for a couple of days.
 <p/>
 
 
-##### Fast stable updates from the *SpiritCroc F-Droid repo*
+### Fast stable updates from the *SpiritCroc F-Droid repo*
 
-|App name|Variant|Notes|
-|--------|-------|-----|
-|[SchildiChat[f]](install-from-sc-fdroid-foss)|<span class="badge foss">FOSS</span>||
-|[SchildiChat[g]](install-from-sc-fdroid-fcm)|<span class="badge fcm">FCM</span>||
-|[SchildiChat](install-from-sc-fdroid)|<span class="badge fcm">FCM</span>|Updates compatible with the version from Google Play Store.|
+|App name|Variant|
+|--------|-------|
+|[SchildiChat[f]](install-from-sc-fdroid-foss)|<span class="badge foss">FOSS</span>|
+|[SchildiChat[g]](install-from-sc-fdroid-fcm)|<span class="badge fcm">FCM</span>|
+|[SchildiChat](install-from-sc-fdroid) (\*)|<span class="badge fcm">FCM</span>|
+(\*) Updates compatible with the version from Google Play Store.
 <p/>
 
 
-##### Beta releases from the *SpiritCroc test-builds F-Droid repo*
+### Beta releases from the *SpiritCroc test-builds F-Droid repo*
 
 |App name|Variant|
 |--------|-------|
@@ -74,13 +76,14 @@ All official sources to install SchildiChat are listed in the following.
 <p/>
 
 
-##### Direct downloads for the latest stable version
+### Direct downloads for the latest stable version
 
-|App name|Variant|Notes|
-|--------|-------|-----|
-|[SchildiChat[f]](https://s2.spiritcroc.de/fdroid/SchildiChat[f].apk)|<span class="badge foss">FOSS</span>||
-|[SchildiChat[g]](https://s2.spiritcroc.de/fdroid/SchildiChat[g].apk)|<span class="badge fcm">FCM</span>||
-|[SchildiChat](https://s2.spiritcroc.de/fdroid/SchildiChat.apk)|<span class="badge fcm">FCM</span>|Updates compatible with the version from Google Play Store.|
+|App name|Variant|
+|--------|-------|
+|[SchildiChat[f]](https://s2.spiritcroc.de/fdroid/SchildiChat[f].apk)|<span class="badge foss">FOSS</span>|
+|[SchildiChat[g]](https://s2.spiritcroc.de/fdroid/SchildiChat[g].apk)|<span class="badge fcm">FCM</span>|
+|[SchildiChat](https://s2.spiritcroc.de/fdroid/SchildiChat.apk) (\*)|<span class="badge fcm">FCM</span>|
+(\*) Updates compatible with the version from Google Play Store.
 <p/>
 
 

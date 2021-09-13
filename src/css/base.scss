@@ -254,10 +254,15 @@ li {
     font-size: 1em;
     line-height: 1;
     color: white;
-    background: green;
+    background: grey;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
+
+    &.foss {
+        color: white;
+        background: green;
+    }
 
     &.fcm {
         color: white;

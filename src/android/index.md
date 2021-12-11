@@ -15,6 +15,9 @@ Compared to the Element app, SchildiChat features following changes:
 - Message bubbles
 - Further usability improvements and additional settings to configure the app
 
+**Discussion**: [#android:schildi.chat](https://matrix.to/#/#android:schildi.chat)  
+**Release announcements**: [#android-announcements:schildi.chat](https://matrix.to/#/#android-announcements:schildi.chat)
+
 
 ## Screenshots
 
@@ -86,6 +89,3 @@ All official sources to install SchildiChat are listed in the following.
 (\*) Updates compatible with the version from Google Play Store.
 <p/>
 
-
-## Get in touch
-Feel free to [join the discussion on matrix](https://matrix.to/#/#schildichat-android:matrix.org).

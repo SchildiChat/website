@@ -64,6 +64,7 @@ in order to have them put into the devDependencies.
 - [stylelint](https://github.com/csmets/metalsmith-sass-lint) (or with postcss, but ditching sass or [using it through postcss]((https://github.com/jonathantneal/postcss-sass)) needed)
 - [metalsmith-rename](https://github.com/MoOx/metalsmith-rename)
 - [minify images](https://github.com/ahmadnassri/metalsmith-imagemin) (this needs glob/pattern and decoupled dependencies added, orient on [gulp plugin](https://github.com/sindresorhus/gulp-imagemin))
+- [cache](https://github.com/leviwheatcroft/metalsmith-cache)
 
 ### jstransformers
 Those are used by `metalsmith-in-place` and `metalsmith-layouts`, in our case:

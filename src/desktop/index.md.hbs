@@ -33,9 +33,9 @@ The most important changes of SchildiChat compared to Element are:
 
 ### apt <small>(e.g. Debian, Ubuntu, ...)</small>
 ```
-sudo apt install -y wget apt-transport-https
-wget -O - https://apt.supercable.onl/super-apt-repo.key | sudo apt-key add - 
-echo "deb [arch=amd64] https://apt.supercable.onl/debian/ all main" | sudo tee /etc/apt/sources.list.d/super-apt-repo.list
+sudo apt install -y curl gnupg apt-transport-https
+curl -fsSL https://apt.supercable.onl/super-apt-repo.key | gpg --dearmor > /usr/share/keyrings/super-apt-repo-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/super-apt-repo-archive-keyring.gpg arch=amd64] https://apt.supercable.onl/debian/ all main" | sudo tee /etc/apt/sources.list.d/super-apt-repo.list
 sudo apt update
 sudo apt install schildichat-desktop
 ```

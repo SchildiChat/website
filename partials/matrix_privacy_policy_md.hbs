@@ -1,4 +1,4 @@
-_Last updated: December 1st, 2021_
+_Last updated: March 19th, 2022_
 
 SchildiChat will be referenced in the later context as "the app".  
 "We", "us" and similar terms refer to the SchildiChat developer team.  
@@ -70,8 +70,17 @@ Bots and Widgets have access to the messages and files in rooms in which they p
 {{#if fcm}}
 ## Firebase Cloud Messaging
 
-The app contains [Firebase Cloud Messaging](https://firebase.google.com/support/privacy/) services that comunicate with the server maintained by [The Matrix.org Foundation](https://matrix.org/legal/privacy-notice) and [Element](https://element.io/privacy) in order to provide efficient push notifications.
-Please refer to their respective privacy policies for further details.
+The app uses [Firebase Cloud Messaging](https://firebase.google.com/support/privacy/) for push notifications (unless you use UnifiedPush, which is explained in the next section).
+In this setup, push notifications are sent from the user's homeserver to a gateway server hosted by the SchildiChat team, which then forwards the notification to Google's FCM infrastructure (please refer to their [privacy policy](https://firebase.google.com/support/privacy/) for further details).
+
+The SchildiChat push gateway servers may thus receive following data, and store it in log files for a limited time:
+
+- The IP address of your device running SchildiChat
+- The user agent of your device running SchildiChat, which may feature information including (but not limited to) your SchildiChat version, Android version, and device model
+- The IP address of your homeserver
+- The home server software in use
+- Times of access
+- The actual content sent by the homeserver for push notifications. This usually only includes internal IDs required to identify the event which triggered the push notification, and should not include actual message content. Please refer to your homeserver's privacy policy for further details.
 {{/if}}
 
 

@@ -46,10 +46,10 @@ GENERATED_SRC := $(ANDRO_SCHILDI_PICS) $(WEB_SCHILDI_PICS)
 build-dependencies: $(GENERATED_SRC)
 
 build: build-dependencies
-	node index
+	NODE_ENV=production node index
 
 build-debug: build-dependencies
-	DEBUG=$(NODE_DEBUG) node index $(DEBUG_URL)
+	DEBUG=$(NODE_DEBUG) NODE_ENV=development DEBUG_URL=$(DEBUG_URL) node index
 
 clean:
 	rm -rf build build-layouts $(GENERATED_SRC)

@@ -1,19 +1,20 @@
 // metalsmith plugins
 const Metalsmith = require('metalsmith');
-const ignore = require('metalsmith-ignore');
+const when = require('metalsmith-if');
+const remove = require('@metalsmith/remove');
 const defaultValues = require('@metalsmith/default-values');
 const favicons = require('metalsmith-favicons');
 const discoverHelpers = require('metalsmith-discover-helpers');
 const nested = require('metalsmith-nested');
 const discoverPartials = require('metalsmith-discover-partials');
-const sass = require('metalsmith-dart-sass');
-const postcss = require('@goodthnx/metalsmith-postcss');
+const sass = require('@metalsmith/sass')
+const postcss = require('@metalsmith/postcss');
 const webpack = require('@goodthnx/metalsmith-webpack')
 const contenthash = require('metalsmith-contenthash');
 const ancestry = require("metalsmith-ancestry");
 const autoDefaults = require("./lib/metalsmith-auto-defaults");
-const inPlace = require('metalsmith-in-place');
-const layouts = require('metalsmith-layouts');
+const inPlace = require('@metalsmith/in-place');
+const layouts = require('@metalsmith/layouts');
 const inlineSVG = require('metalsmith-inline-svg');
 const externalLinks = require("./lib/metalsmith-external-links");
 const prefixoid = require('metalsmith-prefixoid');
@@ -21,10 +22,12 @@ const htmlMinifier = require("metalsmith-html-minifier");
 
 // prefix all absolute paths
 var urlPrefix = ""
-if (process.argv.length > 2) {
-    urlPrefix = process.argv[2];
+if (process.env.DEBUG_URL) {
+    urlPrefix = process.env.DEBUG_URL;
 }
 urlPrefix = urlPrefix.replace(/\/?$/, ""); // enforce no ending slash
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 var svgFavicon = 'img/SchildiChat_nopadding.svg';
 
@@ -55,7 +58,7 @@ Metalsmith(__dirname)
         copyright_date: new Date().getFullYear()
     })
 
-    .use(ignore(['**/.gitignore']))
+    .use(remove(['**/.gitignore']))
 
     // frontmatter (thing in markdown before actual markdown) default values
     .use(defaultValues([
@@ -76,14 +79,16 @@ Metalsmith(__dirname)
         }
     ]))
 
-    .use(favicons({
-        src: svgFavicon,
-        dest: 'img/favicons/',
-        icons: {
-            favicons: true
-        }
-    }))
-    .use(ignore(['img/favicons/manifest.json']))
+    .use(when(isProduction,
+        favicons({
+            src: svgFavicon,
+            dest: 'img/favicons/',
+            icons: {
+                favicons: true
+            }
+        })
+    ))
+    .use(remove(['img/favicons/manifest.json']))
 
     // Helpers to use in *.hbs files
     .use(discoverHelpers())
@@ -110,6 +115,7 @@ Metalsmith(__dirname)
                 // see: https://github.com/postcss/postcss-url/issues/131
                 url: (asset) => (asset.url[0] === '/' ? urlPrefix : '') + asset.url
             },
+            'postcss-preset-env': {},
             'autoprefixer': {},
             'postcss-csso': {}
         }
@@ -226,11 +232,11 @@ Metalsmith(__dirname)
     ]))
 
     // minify html
-    .use(htmlMinifier())
+    .use(when(isProduction, htmlMinifier()))
 
-    // ignore stuff
-    .use(ignore(['**/*.fakechild'])) // they only add to navigation, not needed as file anymore
-    .use(ignore(['**/img/**/orig/**'])) // don't preserve original images not needed in production
+    // remove stuff
+    .use(remove(['**/*.fakechild'])) // they only add to navigation, not needed as file anymore
+    .use(remove(['**/img/**/orig/**'])) // don't preserve original images not needed in production
 
     // And tell Metalsmith to fire it all off.
     .build(function(err) {

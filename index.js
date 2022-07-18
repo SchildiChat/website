@@ -9,7 +9,7 @@ const nested = require('metalsmith-nested');
 const discoverPartials = require('metalsmith-discover-partials');
 const sass = require('@metalsmith/sass')
 const postcss = require('@metalsmith/postcss');
-const webpack = require('@goodthnx/metalsmith-webpack')
+const jsBundle = require('@metalsmith/js-bundle')
 const contenthash = require('metalsmith-contenthash');
 const ancestry = require("metalsmith-ancestry");
 const autoDefaults = require("./lib/metalsmith-auto-defaults");
@@ -49,6 +49,9 @@ var site_default_params = {
 // and strips the frontmatter from each of our
 // source files and passes it on to the plugins.
 Metalsmith(__dirname)
+
+    .env('NODE_ENV', process.env.NODE_ENV)
+    .env('DEBUG', process.env.DEBUG)
 
     .metadata({
         site_name: "SchildiChat",
@@ -121,10 +124,11 @@ Metalsmith(__dirname)
         }
     }))
 
-    // webpack for js
-    .use(webpack({
-        pattern: 'js/bundle.js',
-        config: './webpack.config.js'
+    // esbuild for js
+    .use(jsBundle({
+        entries: {
+            "js/bundle": 'src/js/bundle.js'
+        }
     }))
 
     // Prevent usage of cached files if they have been changed in between

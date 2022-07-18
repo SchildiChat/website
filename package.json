@@ -4,17 +4,14 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    "@babel/core": "^7.18.5",
-    "@babel/preset-env": "^7.18.2",
-    "@goodthnx/metalsmith-webpack": "^1.2.2",
     "@metalsmith/default-values": "^3.2.0",
     "@metalsmith/in-place": "^4.5.0",
+    "@metalsmith/js-bundle": "^0.1.1",
     "@metalsmith/layouts": "^2.5.1",
     "@metalsmith/postcss": "^5.0.0",
     "@metalsmith/remove": "^1.1.2",
     "@metalsmith/sass": "^1.0.0",
     "autoprefixer": "^10.4.7",
-    "babel-loader": "^8.2.5",
     "cheerio": "^1.0.0-rc.11",
     "jstransformer-handlebars": "^1.2.0",
     "jstransformer-markdown-it": "^2.1.0",
@@ -32,8 +29,7 @@
     "postcss": "^8.4.14",
     "postcss-csso": "^6.0.0",
     "postcss-preset-env": "^7.7.1",
-    "postcss-url": "^10.1.3",
-    "webpack": "^5.73.0"
+    "postcss-url": "^10.1.3"
   },
   "resolutions": {
     "minimatch": "^5.1.0",

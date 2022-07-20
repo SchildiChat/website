@@ -14,7 +14,7 @@
     "autoprefixer": "^10.4.7",
     "cheerio": "^1.0.0-rc.12",
     "jstransformer-handlebars": "^1.2.0",
-    "jstransformer-markdown-it": "^2.1.0",
+    "jstransformer-markdown-it": "^3.0.0",
     "metalsmith": "^2.5.0",
     "metalsmith-ancestry": "^1.6.1",
     "metalsmith-contenthash": "^0.2.1",

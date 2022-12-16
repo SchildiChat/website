@@ -1,0 +1,39 @@
+### Hot to use multiple accounts?
+
+When launching `schildichat-desktop` in the command line, you can use profiles for different accounts, e.g. `schildichat-desktop --profile=account2`.
+
+### Why does the desktop app say "use the Desktop app" while searching?
+
+See the related issues here: [https://github.com/SchildiChat/schildichat-desktop/labels/encrypted%20room%20search](https://github.com/SchildiChat/schildichat-desktop/labels/encrypted%20room%20search)
+
+### How to use custom themes?
+
+Enable them inside labs and add a new theme via URL inside the advanced section of the appearance settings.  
+Adding a theme with the same name again ***does not*** change it, you'll either have to remove the old one first and add it anew or directly change the account data.  
+Also make sure the `Access-Control-Allow-Origin: *` header is set on the URL you're trying to load the theme from.
+
+### Where to find custom themes?
+
+Here are some: [https://github.com/aaronraimist/element-themes](https://github.com/aaronraimist/element-themes)  
+To get help or discuss themes, join [#element-themes:raim.ist](https://matrix.to/#/#element-themes:raim.ist).  
+Any theme for Element should work for SchildiChat as well.
+
+### How to remove custom themes?
+
+Write `/devtools` as message in any room and remove it from the `im.vector.web.settings` account data inside the `custom_themes` section.
+
+### Why does the theme not change according to the system theme with Linux?
+
+Linux users suffer from a Chromium bug which prevents the theme being updated if the system theme is being changed.  
+There's now a workaround with cli options which allows to override the detected system theme even for a running profile through abusing the multi instance prevention mechanism.  
+Let it switch to light mode: `schildichat-desktop --system-theme-light-override --hidden`  
+Let it switch to dark mode: `schildichat-desktop --system-theme-dark-override --hidden`  
+You have to do this for each profile seperately, just append the `--profile` option to above commands.
+
+### Why does a click on the tray icon open the context menu instead of the app on Linux?
+
+See here: [https://github.com/SchildiChat/schildichat-desktop/issues/61](https://github.com/SchildiChat/schildichat-desktop/issues/61)
+
+### Where to report bugs and request features?
+
+Feel free to support existing issues, or file new issue on [GitHub](https://github.com/SchildiChat/schildichat-desktop/issues).

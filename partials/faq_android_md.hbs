@@ -1,0 +1,44 @@
+### How do I set up UnifiedPush?
+
+Follow the guide at [unifiedpush.org](https://unifiedpush.org/) to set up UnifiedPush.
+Once you have that working, SchildiChat should pick it up automatically.
+You can also change the distributor in Settings/Notifications/Notification Method.
+
+If you want to use ntfy, and don't want to self-host a server yourself, feel free to use [ntfy.schildi.chat](https://ntfy.schildi.chat).
+
+### Why is UnifiedPush not working?
+
+Here are some common reasons for UnifiedPush not working:
+
+- When using Gotify: didn't install Gotify-UP (the "-UP" part is important!), or forgot to install common-proxies
+- When using a custom gateway on a non-standard port, [this is currently broken](https://github.com/SchildiChat/SchildiChat-android/blob/6076df81ed60089cdad6e9e2b75a93ea5cd2ae33/vector/src/main/java/im/vector/app/core/pushers/UnifiedPushHelper.kt#L221)
+
+### What are the different variants?
+
+You can find information about all available variants [here](/android).
+
+### How to use multiple accounts?
+
+Unfortunately, that's not possible right now.
+We will hopefully get support for multiple accounts once Elements supports it ([they have it on their roadmap at least](https://github.com/vector-im/roadmap/issues/11)).
+Until then, as workaround, the best thing we can offer is using 5 [variants](/android) of SchildiChat, when using our own F-Droid repo, as you can install all of these alongside each other:
+
+- SchildiChat
+- SchildiChat[f]
+- SchildiChat[g]
+- SchildiChat.Beta[f]
+- SchildiChat.Beta[g]
+
+### Why does SchildiChat not support Android Auto? Element does!
+
+We have disabled Android Auto support for the app provided in the Google Play Store, since Google requires you to fill extra legal paperwork for that, and you have to guarantee that you did thoroughly test this scenario. But in fact, we haven't tested this at all. If you want to use Android Auto with SchildiChat, you can still download SchildiChat from any of our F-Droid or direct download sources (even if it's the FCM variant) - we haven't disabled Android Auto there, but use at your own risk.
+
+### Is there any way to find (and join) public rooms?
+
+In case you enabled easy mode during initial setup, you need to first disable it in Settings / Preferences / Easy mode.
+Then, just click the + / #+ buttons while viewing the home rooms list.
+You may want to click the "Change network" options menu item in case you want to see public rooms on suggested homeservers other then your own homeserver.
+
+### Where to report bugs and request features?
+
+Feel free to support existing issues, or file new issue on [GitHub](https://github.com/SchildiChat/SchildiChat-android/issues).

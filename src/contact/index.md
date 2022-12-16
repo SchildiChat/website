@@ -10,8 +10,8 @@ order_id: 10
 
 Please visit the respective community on matrix.org:
 
-- Android: [#schildichat-android:matrix.org](https://matrix.to/#/#schildichat-android:matrix.org)
-- Desktop and Web: [#schildichat-web:matrix.org](https://matrix.to/#/#schildichat-web:matrix.org)
+- Android: [#android:schildi.chat](https://matrix.to/#/#android:schildi.chat)
+- Desktop and Web: [#web:schildi.chat](https://matrix.to/#/#web:schildi.chat)
 
 For inquiries unsuitable for public rooms, you can contact us directly,
 **but please only do if it really does not belong to above rooms**!

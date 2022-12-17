@@ -10,8 +10,10 @@ If you want to use ntfy, and don't want to self-host a server yourself, feel fre
 
 Here are some common reasons for UnifiedPush not working:
 
-- When using Gotify: didn't install Gotify-UP (the "-UP" part is important!), or forgot to install common-proxies
-- When using a custom gateway on a non-standard port, [this is currently broken](https://github.com/SchildiChat/SchildiChat-android/blob/6076df81ed60089cdad6e9e2b75a93ea5cd2ae33/vector/src/main/java/im/vector/app/core/pushers/UnifiedPushHelper.kt#L221)
+- When using a custom gateway on a non-standard port, [this is currently broken](https://github.com/SchildiChat/SchildiChat-android/blob/6076df81ed60089cdad6e9e2b75a93ea5cd2ae33/vector/src/main/java/im/vector/app/core/pushers/UnifiedPushHelper.kt#L221).
+- When using Gotify (which is deprecated, you should consider switching to a different distributor): didn't install Gotify-UP (the "-UP" part is important!), or forgot to install common-proxies?
+
+For debugging UnifidedPush setups, first try to get the "UP-Example" application to work, which you can get on [F-Droid](https://f-droid.org/en/packages/org.unifiedpush.example/). You may also get help at [#unifiedpush:matrix.org](https://matrix.to/#/#unifiedpush:matrix.org).
 
 ### What are the different variants?
 

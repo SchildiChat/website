@@ -34,8 +34,8 @@ Compared to the Element app, SchildiChat features following changes:
 ## Download
 
 
-<a href="https://play.google.com/store/apps/details?id=de.spiritcroc.riotx" alt="Get it on Google Play" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" width="200"></a>
-<a href="https://f-droid.org/packages/de.spiritcroc.riotx/" alt="Get it on F-Droid" target="_blank"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" width="200"></a>
+<a href="https://play.google.com/store/apps/details?id=de.spiritcroc.riotx" alt="Get it on Google Play" target="_blank"><img src="/img/badges/gplay.png" width="200"></a>
+<a href="https://f-droid.org/packages/de.spiritcroc.riotx/" alt="Get it on F-Droid" target="_blank"><img src="/img/badges/fdroid.png" width="200"></a>
 
 
 SchildiChat comes in two variants:

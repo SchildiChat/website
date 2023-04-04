@@ -6,7 +6,7 @@
   "devDependencies": {
     "@metalsmith/default-values": "^3.2.0",
     "@metalsmith/in-place": "^4.5.0",
-    "@metalsmith/js-bundle": "^0.2.0",
+    "@metalsmith/js-bundle": "^0.3.0",
     "@metalsmith/layouts": "^2.5.1",
     "@metalsmith/postcss": "^5.0.0",
     "@metalsmith/remove": "^1.1.2",

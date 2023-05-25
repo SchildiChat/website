@@ -1,4 +1,4 @@
-_Last updated: March 25th, 2022_
+_Last updated: May 25th, 2023_
 
 SchildiChat will be referenced in the later context as "the app".  
 "We", "us" and similar terms refer to the SchildiChat developer team.  
@@ -68,6 +68,20 @@ For the matrix.org identity server, please refer to their privacy policy [here](
 
 The homeserver the user is using may provide a range of integrations in the form of Widgets (web applications accessed as part of the Matrix Client webapp) and Bots (automated participants in rooms).
 Bots and Widgets have access to the messages and files in rooms in which they participate.
+
+
+## TURN (Voice and Video Calls)
+
+For voice and video calls, SchildiChat may connect to a so-called TURN server for routing during the call.
+The app will prefer the TURN server suggested by your homeserver, so please refer to the operator of your homeserver for further details.
+If your homeserver does not configure any preferred TURN server, the app may decide to fall back to one operated by matrix.org, of which you can find the privacy policy [here](https://matrix.org/legal/privacy-notice).
+
+
+## Jitsi (Multi-user Voice and Video Calls)
+
+In rooms with more than two users, SchildiChat implements multi-user calls using a [Jitsi](https://jitsi.org/) widget, which connects the app to a dedicated Jitsi-server during the call.
+The app will prefer the Jitsi server suggested by your homeserver, so please refer to the operator of your homeserver for further details.
+If your homeserver does not configure any preferred Jitsi server, the app may decide to fall back to one hosted for Element by New Vector Ltd, of which you can find the privacy policy [here](https://element.io/privacy).
 
 
 {{#if fcm}}

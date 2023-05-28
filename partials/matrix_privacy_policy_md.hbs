@@ -1,4 +1,4 @@
-_Last updated: May 25th, 2023_
+_Last updated: May 28th, 2023_
 
 SchildiChat will be referenced in the later context as "the app".  
 "We", "us" and similar terms refer to the SchildiChat developer team.  
@@ -66,22 +66,27 @@ For the matrix.org identity server, please refer to their privacy policy [here](
 
 ## Integration Services (Bots and Widgets)
 
-The homeserver the user is using may provide a range of integrations in the form of Widgets (web applications accessed as part of the Matrix Client webapp) and Bots (automated participants in rooms).
+The homeserver the user is using, and other homeservers that the user's homeserver is federating with, may provide a range of integrations in the form of Widgets (web applications accessed as part of the Matrix Client webapp) and Bots (automated participants in rooms).
 Bots and Widgets have access to the messages and files in rooms in which they participate.
+Please refer to the privacy policies provided by the operators of these services for further details.
 
 
 ## TURN (Voice and Video Calls)
 
 For voice and video calls, SchildiChat may connect to a so-called TURN server for routing during the call.
-The app will prefer the TURN server suggested by your homeserver, so please refer to the operator of your homeserver for further details.
+The app will prefer the TURN server suggested by your homeserver.
 If your homeserver does not configure any preferred TURN server, the app may decide to fall back to one operated by matrix.org, of which you can find the privacy policy [here](https://matrix.org/legal/privacy-notice).
+For federated rooms, a TURN server suggested by one of the other chat participants may be used.
+Please refer to the privacy policy provided by the operator of the appropriate TURN server for further details.
 
 
 ## Jitsi (Multi-user Voice and Video Calls)
 
 In rooms with more than two users, SchildiChat implements multi-user calls using a [Jitsi](https://jitsi.org/) widget, which connects the app to a dedicated Jitsi-server during the call.
-The app will prefer the Jitsi server suggested by your homeserver, so please refer to the operator of your homeserver for further details.
+The app will prefer the Jitsi server suggested by your homeserver.
 If your homeserver does not configure any preferred Jitsi server, the app may decide to fall back to one hosted for Element by New Vector Ltd, of which you can find the privacy policy [here](https://element.io/privacy).
+For federated rooms, a Jitsi server suggested by one of the other chat participants may be used.
+Please refer to the privacy policy provided by the operator of the appropriate Jitsi server for further details.
 
 
 {{#if fcm}}

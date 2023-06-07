@@ -55,7 +55,7 @@ Metalsmith(__dirname)
 
     .metadata({
         site_name: "SchildiChat",
-        site_description: "SchildiChat is a Matrix client based on Element with a more traditional instant messaging experience.",
+        site_description: "SchildiChat is a feature-rich messenger for Matrix based on Element with some extras and tweaks.",
         url_prefix: urlPrefix,
         svg_favicon: svgFavicon,
         copyright_date: new Date().getFullYear()

@@ -30,9 +30,13 @@ The most important changes of SchildiChat compared to Element are:
 ## Where can I get it?
 - [All downloads for Desktop]({{github_src_link}}/releases) (old versions, **Windows** packages, <span style="display: inline-block">a **Linux AppImage** build</span> and <span style="display: inline-block">a build for **macOS**</span>)  
 - [https://app.schildi.chat/](https://app.schildi.chat/) (hosted web variant)
-- As installable package through a **Linux** package manager (see instructions below)
+- As installable package through a **Linux** or **MacOS** package manager (see instructions below)
 
-### apt <small>(e.g. Debian, Ubuntu, ...)</small>
+### Official packages
+
+Following packages are maintained by the SchildiChat team.
+
+#### apt <small>(e.g. Debian, Ubuntu, ...)</small>
 ```
 sudo apt install -y curl gnupg apt-transport-https
 curl -fsSL https://apt.supercable.onl/super-apt-repo.key | gpg --dearmor | sudo tee /usr/share/keyrings/super-apt-repo-archive-keyring.gpg
@@ -41,33 +45,37 @@ sudo apt update
 sudo apt install schildichat-desktop
 ```
 
-### AUR <small>(e.g. Arch Linux, Manjaro, ...)</small>
+#### AUR <small>(e.g. Arch Linux, Manjaro, ...)</small>
 SchildiChat can be installed from the [AUR](https://wiki.archlinux.org/index.php/Arch_User_Repository):
 ```
 yay -S schildichat-desktop-bin # or similar
 ```
 
-### Flatpak
+#### Flatpak
 SchildiChat is distributed on [Flathub](https://flathub.org/apps/details/chat.schildi.desktop):
 ```
 flatpak install flathub chat.schildi.desktop
 ```
 
-### Nix <small>(e.g. NixOS, home-manager or any Linux distro)</small>
+### Community packages
+
+Following packages are maintained by community members, and not controlled by the SchildiChat team.
+
+#### Nix <small>(e.g. NixOS, home-manager or any Linux distro)</small>
 The packages `schildichat-desktop` and `schildichat-desktop-wayland` are available in the nixos-unstable channel or the upcoming 21.11 release.
 
-### MPR <small>(e.g. Ubuntu, Debian, ...)</small>
+#### MPR <small>(e.g. Ubuntu, Debian, ...)</small>
 SchildiChat can be installed from the [MPR](https://makedeb.hunterwittenborn.com/mpr/introduction/):
 ```
 tap install schildichat-desktop-bin # or similar
 ```
 
-### Homebrew <small>(macOS)</small>
+#### Homebrew <small>(macOS)</small>
 ```
 brew install schildichat
 ```
 
-### Mageia <small>(rpm package)</small>
+#### Mageia <small>(rpm package)</small>
 SchildiChat can be installed from a community repository. The package works only with Mageia 8.
 ```
 su -c "urpmi.addmedia --distrib https://mageialinux-online.org/repository/8/$(arch)"

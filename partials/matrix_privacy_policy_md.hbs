@@ -53,6 +53,7 @@ When a room has been bridged, your messages and media may be copied onto the bri
 - Bridged services can be located anywhere in the world, and are subject to local laws and regulations.
 
 
+{{#if identityserver}}
 ## Identity server
 
 The user may wish to use an identity server, which allows to look up Matrix contacts from other personal identifiers such as email addresses or phone numbers.
@@ -62,6 +63,7 @@ No contacts are accessed without user action indicating their wish to do so.
 For the privacy policy of the identity server, please ask the provider of your identity server.
 The identity server in use can be influenced by the homeserver's configuration and the user's own preference.
 For the matrix.org identity server, please refer to their privacy policy [here](https://matrix.org/legal/identity-server-privacy-notice-1).
+{{/if}}
 
 
 ## Integration Services (Bots and Widgets)
@@ -79,7 +81,7 @@ If your homeserver does not configure any preferred TURN server, the app may dec
 For federated rooms, a TURN server suggested by one of the other chat participants may be used.
 Please refer to the privacy policy provided by the operator of the appropriate TURN server for further details.
 
-
+{{#if jitsi}}
 ## Jitsi (Multi-user Voice and Video Calls)
 
 In rooms with more than two users, SchildiChat implements multi-user calls using a [Jitsi](https://jitsi.org/) widget, which connects the app to a dedicated Jitsi-server during the call.
@@ -87,6 +89,7 @@ The app will prefer the Jitsi server suggested by your homeserver.
 If your homeserver does not configure any preferred Jitsi server, the app may decide to fall back to one hosted for Element by New Vector Ltd, of which you can find the privacy policy [here](https://element.io/privacy).
 For federated rooms, a Jitsi server suggested by one of the other chat participants may be used.
 Please refer to the privacy policy provided by the operator of the appropriate Jitsi server for further details.
+{{/if}}
 
 
 {{#if fcm}}

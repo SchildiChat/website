@@ -8,15 +8,12 @@ direct_download_app_name: SchildiChat
 github_src_link: https://github.com/SchildiChat/SchildiChat-android
 ---
 
-SchildiChat for Android is a Matrix Client based on [Element Android](https://github.com/vector-im/riotX-android).
-
-Compared to the Element app, SchildiChat features following changes:
-- Unified chat list for both direct and group chats
-- Message bubbles
-- Further usability improvements and additional settings to configure the app
+SchildiChat for Android is a Matrix Client based on [Element Android](https://github.com/vector-im/riotX-android) with some [extras and tweaks](https://github.com/SchildiChat/SchildiChat-android/blob/sc/FEATURES.md).
 
 **Discussion**: [#android:schildi.chat](https://matrix.to/#/#android:schildi.chat)  
 **Release announcements**: [#android-announcements:schildi.chat](https://matrix.to/#/#android-announcements:schildi.chat)
+
+Looking for preview builds of SchildiChat Next, the SchildiChat for Android rewrite based on the new Element X? [Click here](next)
 
 
 ## Screenshots

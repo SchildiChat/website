@@ -1,0 +1,30 @@
+### What are the differences compared to Element X Android?
+
+I'm maintaining a list [here](https://github.com/SchildiChat/schildichat-android-next/blob/main/FEATURES.md), but note that this may not be complete and partly outdated.
+
+### How do I set up UnifiedPush?
+
+Follow the guide at [unifiedpush.org](https://unifiedpush.org/) to set up UnifiedPush.
+Once you have that working, SchildiChat should pick it up automatically.
+To test whether the your push distributor was successfully picked up, let someone send you a message which triggers a notification, then check Settings/Turtle Tweaks/Push Info.
+
+If you want to use ntfy, and don't want to self-host a server yourself, feel free to use [ntfy.schildi.chat](https://ntfy.schildi.chat).
+
+### Why is UnifiedPush not working?
+
+Here are some common reasons for UnifiedPush not working:
+
+- When using a custom gateway on a non-standard port, [this is currently broken](https://github.com/SchildiChat/SchildiChat-android/blob/6076df81ed60089cdad6e9e2b75a93ea5cd2ae33/vector/src/main/java/im/vector/app/core/pushers/UnifiedPushHelper.kt#L221).
+- When using Gotify (which is deprecated, you should consider switching to a different distributor): didn't install Gotify-UP (the "-UP" part is important!), or forgot to install common-proxies?
+
+For debugging UnifidedPush setups, first try to get the "UP-Example" application to work, which you can get on [F-Droid](https://f-droid.org/en/packages/org.unifiedpush.example/). You may also get help at [#unifiedpush:matrix.org](https://matrix.to/#/#unifiedpush:matrix.org).
+
+### Is there any way to find (and join) public rooms?
+
+No, this has not been implemented in Element X yet, and will not be added to SchildiChat Next before Element X adds it.
+
+### Where to report bugs and request features?
+
+Feel free to support existing issues, or file new issue on [GitHub](https://github.com/SchildiChat/schildichat-android-next/issues).  
+In case you experience bugs that require logs to debug, such as app crashes or other bugs not commonly reproducable, send a bug report from the app's settings ("Report a problem") and make sure to have the logs option enabled.
+Also make sure to always provide a concise description of what your issue is and what you did in order to observe it.

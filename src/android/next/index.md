@@ -20,12 +20,10 @@ SchildiChat Next is a Matrix Client based on [Element X Android](https://github.
 <a href="img/3_en-US.png" class="phone-screenshot"><img alt="Screenshot" src="img/3_en-US.png"></a>
 </div>
 
-<!--
 ## Download
 
 <a href="https://play.google.com/store/apps/details?id=chat.schildi.android" alt="Get it on Google Play" target="_blank"><img src="/img/badges/gplay.png" width="200"></a>
 <a href="install-from-sc-fdroid" alt="Get it on F-Droid" target="_blank"><img src="/img/badges/fdroid.png" width="200"></a>
--->
 
 ## Beta/test releases
 

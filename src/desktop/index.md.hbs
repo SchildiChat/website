@@ -39,7 +39,7 @@ Following packages are maintained by the SchildiChat team.
 #### apt <small>(e.g. Debian, Ubuntu, ...)</small>
 ```
 sudo apt install -y curl gnupg apt-transport-https
-curl -fsSL https://apt.supercable.onl/super-apt-repo.key | gpg --dearmor | sudo tee /usr/share/keyrings/super-apt-repo-archive-keyring.gpg
+curl -fsSL https://apt.supercable.onl/super-apt-repo.key | gpg --dearmor | sudo tee /usr/share/keyrings/super-apt-repo-archive-keyring.gpg > /dev/null
 echo "deb [signed-by=/usr/share/keyrings/super-apt-repo-archive-keyring.gpg arch=amd64] https://apt.supercable.onl/debian/ all main" | sudo tee /etc/apt/sources.list.d/super-apt-repo.list
 sudo apt update
 sudo apt install schildichat-desktop

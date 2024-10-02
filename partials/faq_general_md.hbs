@@ -31,6 +31,13 @@ When you have a look at the SchildiChat version, the part before "sc" is the ups
 
 Since SchildiChat is a fork of [Element](https://element.io/), "upstream" refers to "Element".
 
+### What is the hash of the SchildiChat Developer's app signing key?
+
+SHA-256 hashes for builds in the main repo, as provided by `keytool -printcert -jarfile` from the build machine, by using [AppVerifier](https://github.com/soupslurpr/AppVerifier) on an android device, or by using `apksigner --verify --print-certs` in a command prompt or Termux on android.
+
+SchildiChat [g] and [f] builds: FA:C0:73:C4:2D:F8:A2:4E:D7:9E:D6:1A:19:86:A0:08:B6:3D:64:68:99:21:70:F8:2C:29:D7:9B:C6:80:8E:AC
+Play-Store compatible builds: 66:12:AD:E7:E9:31:74:A5:89:CF:5B:A2:6E:D3:AB:28:23:1A:78:96:40:54:6C:8F:30:37:5E:F0:45:BC:92:42
+
 ### How can I help to translate SchildiChat?
 
 You can translate SchildiChat-specific text at [translate.schildi.chat](https://translate.schildi.chat)!

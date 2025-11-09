@@ -80,9 +80,9 @@ All official sources to install SchildiChat are listed in the following.
 
 |App name|Variant|
 |--------|-------|
-|[SchildiChat[f]](https://s2.spiritcroc.de/fdroid/SchildiChat[f].apk)|<span class="badge foss">FOSS</span>|
-|[SchildiChat[g]](https://s2.spiritcroc.de/fdroid/SchildiChat[g].apk)|<span class="badge fcm">FCM</span>|
-|[SchildiChat](https://s2.spiritcroc.de/fdroid/SchildiChat.apk) (\*)|<span class="badge fcm">FCM</span>|
+|[SchildiChat[f]](https://s2.spiritcroc.de/fdroid/SchildiChat[f]Legacy.apk)|<span class="badge foss">FOSS</span>|
+|[SchildiChat[g]](https://s2.spiritcroc.de/fdroid/SchildiChat[g]Legacy.apk)|<span class="badge fcm">FCM</span>|
+|[SchildiChat](https://s2.spiritcroc.de/fdroid/SchildiChatLegacy.apk) (\*)|<span class="badge fcm">FCM</span>|
 (\*) Updates compatible with the version from Google Play Store.
 <p/>
 

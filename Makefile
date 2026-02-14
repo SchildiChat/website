@@ -21,7 +21,7 @@ ANDRO_SCHILDI_REPO ?= ~/AndroidStudioProjects/SchildiChat-android
 ANDRO_SCHILDI_PICS_SRC_DIR := $(ANDRO_SCHILDI_REPO)/fastlane/metadata/android/en-US/images/phoneScreenshots/
 ANDRO_SCHILDI_PICS_NOPATH := 2_en-US.png 3_en-US.png 4_en-US.png
 ANDRO_SCHILDI_PICS_SRC := $(addprefix $(ANDRO_SCHILDI_PICS_SRC_DIR)/, $(ANDRO_SCHILDI_PICS_NOPATH))
-ANDRO_SCHILDI_PICS_TARGET_DIR := src/android/img
+ANDRO_SCHILDI_PICS_TARGET_DIR := src/legacy/android/img
 ANDRO_SCHILDI_PICS := $(addprefix $(ANDRO_SCHILDI_PICS_TARGET_DIR)/, $(ANDRO_SCHILDI_PICS_NOPATH))
 
 $(ANDRO_SCHILDI_PICS_TARGET_DIR)/%.png: $(ANDRO_SCHILDI_PICS_SRC_DIR)/%.png
@@ -31,7 +31,7 @@ ANDRO_NEXT_SCHILDI_REPO ?= ~/AndroidStudioProjects/schildichat-android-next
 ANDRO_NEXT_SCHILDI_PICS_SRC_DIR := $(ANDRO_NEXT_SCHILDI_REPO)/metadata/en-US/images/phoneScreenshots/
 ANDRO_NEXT_SCHILDI_PICS_NOPATH := 1_en-US.png 2_en-US.png 3_en-US.png
 ANDRO_NEXT_SCHILDI_PICS_SRC := $(addprefix $(ANDRO_NEXT_SCHILDI_PICS_SRC_DIR)/, $(ANDRO_NEXT_SCHILDI_PICS_NOPATH))
-ANDRO_NEXT_SCHILDI_PICS_TARGET_DIR := src/android/next/img
+ANDRO_NEXT_SCHILDI_PICS_TARGET_DIR := src/next/img
 ANDRO_NEXT_SCHILDI_PICS := $(addprefix $(ANDRO_NEXT_SCHILDI_PICS_TARGET_DIR)/, $(ANDRO_NEXT_SCHILDI_PICS_NOPATH))
 
 $(ANDRO_NEXT_SCHILDI_PICS_TARGET_DIR)/%.png: $(ANDRO_NEXT_SCHILDI_PICS_SRC_DIR)/%.png
@@ -44,14 +44,22 @@ WEB_SCHILDI_REPO ?= ~/git/schildichat-desktop
 WEB_SCHILDI_PICS_SRC_DIR := $(WEB_SCHILDI_REPO)/screenshots/
 WEB_SCHILDI_PICS_NOPATH := 1.png
 WEB_SCHILDI_PICS_SRC := $(addprefix $(WEB_SCHILDI_PICS_SRC_DIR)/, $(WEB_SCHILDI_PICS_NOPATH))
-WEB_SCHILDI_PICS_TARGET_DIR := src/desktop/img
+WEB_SCHILDI_PICS_TARGET_DIR := src/legacy/desktop/img
 WEB_SCHILDI_PICS := $(addprefix $(WEB_SCHILDI_PICS_TARGET_DIR)/, $(WEB_SCHILDI_PICS_NOPATH))
 
-$(WEB_SCHILDI_PICS_TARGET_DIR)/%.png: $(WEB_SCHILDI_PICS_SRC_DIR)/%.png
+# We extract Revenge screenshots from its git repo
+REVENGE_REPO ?= ~/schildichat-dev/revenge
+REVENGE_PICS_SRC_DIR := $(REVENGE_REPO)/screenshots/
+REVENGE_PICS_NOPATH := inbox_2.png conversation_2.png conversation_1.png
+REVENGE_PICS_SRC := $(addprefix $(REVENGE_PICS_SRC_DIR)/, $(REVENGE_PICS_NOPATH))
+REVENGE_PICS_TARGET_DIR := src/revenge/img
+REVENGE_PICS := $(addprefix $(REVENGE_PICS_TARGET_DIR)/, $(REVENGE_PICS_NOPATH))
+
+$(REVENGE_PICS_TARGET_DIR)/%.png: $(REVENGE_PICS_SRC_DIR)/%.png
 	cp $< $@
 
 # Add files that need rules to be run before metalsmith here.
-GENERATED_SRC := $(ANDRO_SCHILDI_PICS) $(ANDRO_NEXT_SCHILDI_PICS) $(WEB_SCHILDI_PICS)
+GENERATED_SRC := $(ANDRO_SCHILDI_PICS) $(ANDRO_NEXT_SCHILDI_PICS) $(WEB_SCHILDI_PICS) $(REVENGE_PICS)
 
 build-dependencies: $(GENERATED_SRC)
 

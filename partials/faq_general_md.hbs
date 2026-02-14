@@ -6,6 +6,7 @@ Schildi = Schildkröte = German for turtle. So "Turtle"-Chat. Feel free to call 
 
 [A turtle with a post horn.](/img/real_schildichat_turtle.jpg)
 
+{{#if element_fork}}
 ### What is the goal of this Element fork?
 
 We mainly focus on tweaking the UI to our likings and usually do not want to go deep into architectural changes to reduce merge conflicts with upstream.  
@@ -16,6 +17,7 @@ Of course, this does not imply that SchildiChat has less bugs, since we're not s
 To summarize, the main goal of the SchildiChat clients is as following:
 we want to take a Matrix client that is good, and tweak it just to match our taste, since Element's design team has a different taste than we have, and our priorities do not always align with those upstream.  
 We are not trying to please any particular kind of target user group, except those who share our taste :)
+{{/if}}
 
 {{#if variant_unspecific}}
 ### Will there be an iOS version?
@@ -23,6 +25,7 @@ We are not trying to please any particular kind of target user group, except tho
 [No.](https://github.com/SchildiChat/schildichat-desktop/issues/18#issuecomment-1358985794)
 {{/if}}
 
+{{#if element_fork}}
 ### What version of Element is SchildiChat based on?
 
 When you have a look at the SchildiChat version, the part before "sc" is the upstream Element version that your current SchildiChat build is based on.
@@ -35,6 +38,11 @@ Since SchildiChat is a fork of [Element](https://element.io/), "upstream" refers
 
 You can translate SchildiChat-specific text at [translate.schildi.chat](https://translate.schildi.chat)!
 For Element-specific translations, visit their [weblate](https://translate.element.io) and [localazy](https://localazy.com/p/element) websites, and we will get it for our next upstream merge.
+{{else}}
+### How can I help to translate SchildiChat?
+
+You can contribute SchildiChat translations at [translate.schildi.chat](https://translate.schildi.chat).
+{{/if}}
 
 ### How can I donate you something?
 
@@ -50,7 +58,8 @@ Matrix is a chat network, and so you can use it to get in touch with the Schildi
 Feel free to join any of the following:
 
 - Android discussion: [#android:schildi.chat](https://matrix.to/#/#android:schildi.chat)
-- Desktop and Web discussion: [#web:schildi.chat](https://matrix.to/#/#web:schildi.chat)
+- Revenge (desktop) discussion: [#revenge:schildi.chat](https://matrix.to/#/#revenge:schildi.chat)
+- Legacy Desktop and Web discussion: [#web:schildi.chat](https://matrix.to/#/#web:schildi.chat)
 - General discussion: [#lounge:schildi.chat](https://matrix.to/#/#lounge:schildi.chat)
 - Community space: [#space:schildi.chat](https://matrix.to/#/#space:schildi.chat)
 
@@ -58,6 +67,5 @@ Feel free to join any of the following:
 
 We have announcement rooms that you can join:
 
-- Android: [#android-announcements:schildi.chat](https://matrix.to/#/#android-announcements:schildi.chat)
-- Desktop and Web: [#web-announcements:schildi.chat](https://matrix.to/#/#web-announcements:schildi.chat)
-- Android-Next (preview): [#android-next-announcements:schildi.chat](https://matrix.to/#/#android-next-announcements:schildi.chat)
+- Android (Next): [#android-next-announcements:schildi.chat](https://matrix.to/#/#android-next-announcements:schildi.chat)
+- Legacy Android: [#android-announcements:schildi.chat](https://matrix.to/#/#android-announcements:schildi.chat)

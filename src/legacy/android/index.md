@@ -13,7 +13,7 @@ SchildiChat for Android is a Matrix Client based on [Element Android](https://gi
 **Discussion**: [#android:schildi.chat](https://matrix.to/#/#android:schildi.chat)  
 **Release announcements**: [#android-announcements:schildi.chat](https://matrix.to/#/#android-announcements:schildi.chat)
 
-Looking for SchildiChat Next, the next-generation SchildiChat for Android rewrite based on Element X? [Click here](/next)
+Looking for SchildiChat Next, the next-generation SchildiChat for Android rewrite based on Element&nbsp;X? [Click here](/next)
 
 
 ## Screenshots

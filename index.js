@@ -29,7 +29,7 @@ urlPrefix = urlPrefix.replace(/\/?$/, ""); // enforce no ending slash
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-var svgFavicon = 'img/SchildiChat_nopadding.svg';
+var svgFavicon = 'img/icon-next.svg';
 
 var site_default_params = {
     title: "SchildiChat",

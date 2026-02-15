@@ -9,11 +9,7 @@ github_src_link: https://github.com/SchildiChat/schildichat-android-next
 
 SchildiChat Next is a Matrix Client based on [Element&nbsp;X Android](https://github.com/element-hq/element-x-android) with some [extras and tweaks](https://github.com/SchildiChat/schildichat-android-next/blob/main/FEATURES.md), and embodies the 2nd generation of SchildiChat for Android.
 
-<div class="note">
-
-**NOTE**: If you are looking about info for the first generation of SchildiChat Android, look [here](/legacy/android).
-
-</div>
+You can find information about the previous generation of SchildiChat Android [here](/legacy/android).
 
 **Discussion**: [#android:schildi.chat](https://matrix.to/#/#android:schildi.chat)  
 **Release announcements**: [#android-next-announcements:schildi.chat](https://matrix.to/#/#android-next-announcements:schildi.chat)

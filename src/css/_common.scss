@@ -57,8 +57,7 @@ img {
 
 pre {
     display: block;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     overflow: auto;
     font-size: .875em;
     font-family: $font-family-monospace;
@@ -76,6 +75,17 @@ pre {
 code {
     font-size: .875em;
     word-wrap: break-word;
+}
+
+.note {
+    display: block;
+    margin: 1rem 0;
+    border: 1px solid $color-separator;
+    padding: .5rem;
+
+    p {
+        margin: 0;
+    }
 }
 
 .site-nav {

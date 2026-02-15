@@ -10,10 +10,15 @@ github_src_link: https://github.com/SchildiChat/SchildiChat-android
 
 SchildiChat for Android is a Matrix Client based on [Element Android](https://github.com/vector-im/riotX-android) with some [extras and tweaks](https://github.com/SchildiChat/SchildiChat-android/blob/sc/FEATURES.md).
 
+<div class="note">
+
+**NOTE**: This page is about the first generation of SchildiChat Android, which is barely maintained anymore.
+If you're looking for SchildiChat Next, the next-generation SchildiChat for Android rewrite based on Element&nbsp;X, you can find it [here](/next).
+
+</div>
+
 **Discussion**: [#android:schildi.chat](https://matrix.to/#/#android:schildi.chat)  
 **Release announcements**: [#android-announcements:schildi.chat](https://matrix.to/#/#android-announcements:schildi.chat)
-
-If you're looking for SchildiChat Next, the next-generation SchildiChat for Android rewrite based on Element&nbsp;X, you can find it [here](/next).
 
 
 ## Screenshots

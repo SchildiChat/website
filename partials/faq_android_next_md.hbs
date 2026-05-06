@@ -35,11 +35,13 @@ You can check the downloaded apk from the SpiritCroc F-Droid repository for foll
 
 ### I'm struggling to install the correct APK because I don't use F-Droid directly, but prefer Obtainium or something
 
-Make sure to pick the right version number for your device.
-The last digit of the version number indicates the ABI, and the highest version number is usually not what you need.
+Make sure to pick the right version code for your device.
+The last digit of the version code indicates the ABI, and the highest version code is usually not what you need.
 
 - **0**: universal, works always but has the biggest APK size.
 - **1**: `armeabi-v7a` (ARM 32 bit, very very old or low-end phones)
 - **2**: `arm64-v8a` (ARM 64 bit, you probably need this if you're running a "normal phone")
 - **3**: `x86`
 - **4**: `x86_64`
+
+Note the version code is a plain number and not to be confused with the version name, which can include non-numeric characters as well, and tends to be the same for the latest release across all ABIs.

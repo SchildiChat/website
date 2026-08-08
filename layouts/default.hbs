@@ -2,7 +2,7 @@
 layout: base.hbs
 ---
 
-<main class="container">
+<main class="container{{#if page_class}} {{page_class}}{{/if}}">
     {{> page_header}}
 
     {{{ contents }}}

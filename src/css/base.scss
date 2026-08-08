@@ -49,6 +49,20 @@ main {
     overflow-x: auto;
 }
 
+th, td {
+    vertical-align: top;
+}
+
+.overview > table {
+    th, td {
+        padding: .5em .75em;
+    }
+
+    th:nth-child(2), td:nth-child(2) {
+        text-align: center;
+    }
+}
+
 .page-header {
     font-size: 2em;
     color: $accent;

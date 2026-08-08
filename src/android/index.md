@@ -8,5 +8,6 @@ show_subpages_in_related_links: false
 ---
 
 Choose your client:
-- [SchildiChat Next](/next), the 2nd-generation SchildiChat Android client based on Element&nbsp;X
-- [SchildiChat Legacy](/legacy/android), the first generation of SchildiChat Android
+- [SchildiChat Next](/next), the 2nd-generation SchildiChat Android client based on Element&nbsp;X. This is the currently recommended option.
+- [SchildiChat Legacy](/legacy/android), the first generation of SchildiChat Android based on Element&nbsp;Classic.
+- [SchildiChat Revenge](/revenge), the upcoming 3rd generation with a shared codebase for Desktop and Android.

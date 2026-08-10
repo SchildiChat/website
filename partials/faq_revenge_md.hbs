@@ -3,6 +3,12 @@
 SchildiChat Revenge's UI is for the most part written from scratch using Kotlin and Jetpack Compose, while occasionally re-using some components found in SchildiChat Next.
 On the data layer, Revenge builds on the [matrix-rust-sdk](https://github.com/SchildiChat/matrix-rust-sdk) and some abstraction layers found in SchildiChat Next / Element&nbsp;X Android.
 
+### How about Web / iOS support?
+
+Technically it could be possible: Kotlin, Compose Multiplatform and Rust all should support these as targets.
+However our codebase currently has quite a few JVM dependencies still, and FFI (Rust to Kotlin bindings) needs to be figured out for each platform, so it will probably not be a quick port.
+At the current time I have no plans of supporting these, but feel to have a try of porting it yourself if you're interested.
+
 ### What is Schildi taking "Revenge" for?
 
 If you need something specific here, go for the developer pain experienced from maintaining an Element Web fork :)  

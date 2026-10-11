@@ -138,3 +138,7 @@ footer {
 .footer-content {
     flex-direction: column-reverse;
 }
+
+.footer-links {
+    @extend %footer-links-centered;
+}

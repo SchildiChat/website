@@ -127,6 +127,7 @@ code {
     > * {
         margin-top: $top;
         margin-left: $left;
+        max-width: calc(100% - #{$left});
     }
 }
 
@@ -200,17 +201,26 @@ footer {
 
 .footer-links {
     @extend %bar-links;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-auto-flow: column;
 
     // Stack the links instead of wrapping single ones
     &.adjusted {
-        flex-direction: column;
-        align-items: center;
+        grid-auto-flow: row;
     }
+}
+
+// Same width for all, so a middle link is centered above the copyright
+%footer-links-centered {
+    grid-auto-columns: 1fr;
+}
+
+.footer-content.adjusted .footer-links {
+    @extend %footer-links-centered;
 }
 
 .footer-link {
     @extend %bar-link;
+    justify-content: center;
+    white-space: nowrap;
 }

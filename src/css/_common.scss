@@ -200,6 +200,15 @@ footer {
 
 .footer-links {
     @extend %bar-links;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    // Stack the links instead of wrapping single ones
+    &.adjusted {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .footer-link {

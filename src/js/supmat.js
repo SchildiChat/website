@@ -15,11 +15,17 @@ var initSupmat = function() {
 	/** 
 	 * Change flex-direction between row and column, also reverse opposit direction if needed.
 	 * 
-	 * @todo allow nesting through building a tree, start with root, append class to each once adjusted, only adjust child if parent is adjusted
 	 * @todo dethrottle
 	 */
 	const flexDirectionAdjust = () => {
 		var containers = document.getElementsByClassName("flex-dynamic-adjust");
+
+		// Measure all in their default direction, as an adjusted container has a different size.
+		// Containers are in document order, so parents get adjusted before their children are measured.
+		for (var i = 0; i < containers.length; i++) {
+			containers[i].classList.remove("adjusted");
+		}
+
 		for (var i = 0; i < containers.length; i++) {
 			var parent = containers[i];
 
@@ -54,7 +60,8 @@ var initSupmat = function() {
 				}
 			}
 
-			if (parentSize >= childrenSize) {
+			// Tolerance, as computed sizes are rounded and a container may fit its children exactly
+			if (parentSize + 1 >= childrenSize) {
 				adjust(parent, false);
 			} else {
 				adjust(parent, true);

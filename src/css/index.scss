@@ -113,11 +113,15 @@ a:not(.button) {
 }
 
 .buttons .button {
-    width: 8rem;
+    width: 9.5rem;
     margin: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .icon {
+        flex-shrink: 0;
+    }
 
     @media only screen and (max-width: $breakpoint2) {
         width: 100%;

@@ -130,15 +130,20 @@ code {
     }
 }
 
+// Inline instead of flex, so text-wrap can balance the lines
 %bar-links {
-    @include spaced-wrapping-flex-row(.6rem, 2rem);
-
-    justify-content: center;
+    margin: -.3rem -1rem;
     text-align: center;
+    text-wrap: balance;
+
+    > * {
+        margin: .3rem 1rem;
+        vertical-align: middle;
+    }
 }
 
 %bar-link {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;

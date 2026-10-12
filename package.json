@@ -13,6 +13,7 @@
     "@metalsmith/sass": "^1.0.1",
     "autoprefixer": "^10.4.7",
     "cheerio": "^1.0.0-rc.12",
+    "cssnano": "^9.6.0",
     "jstransformer-handlebars": "^1.2.0",
     "jstransformer-markdown-it": "^3.0.0",
     "metalsmith": "^2.5.0",
@@ -27,7 +28,6 @@
     "metalsmith-nested": "^0.3.8",
     "metalsmith-prefixoid": "^1.0.3",
     "postcss": "^8.4.14",
-    "postcss-csso": "^6.0.0",
     "postcss-preset-env": "^11.6.1",
     "postcss-url": "^10.1.3"
   },

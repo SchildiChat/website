@@ -120,7 +120,7 @@ Metalsmith(__dirname)
             },
             'postcss-preset-env': {},
             'autoprefixer': {},
-            'postcss-csso': {}
+            'cssnano': {}
         }
     }))
 

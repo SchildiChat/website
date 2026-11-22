@@ -9,6 +9,28 @@ Technically it could be possible: Kotlin, Compose Multiplatform and Rust all sho
 However our codebase currently has quite a few JVM dependencies still, and FFI (Rust to Kotlin bindings) needs to be figured out for each platform, so it will probably not be a quick port.
 At the current time I have no plans of supporting these, but feel to have a try of porting it yourself if you're interested.
 
+### Can I trigger slash commands from the message composer?
+
+No. Revenge intentionally has a "command mode" that is separate from the message composer,
+as this approach allows us to also trigger commands outside of chats, or in chats that don't allow sending messages at all and thus block the composer.
+Furthermore, sending messages that start with a slash is not something that the Matrix spec prevents you from doing,
+so reserving it for app-side functionality is an unnecessary limitation to what you can send in chats.
+
+### How to enter command mode?
+
+There are multiple ways to enter command mode:
+
+- If you are using a keyboard, you can press control-shift-K (or, if you customized your keybindings, whatever shortcut you have set up for the `Command` command).
+- Long-press / right-click any of your chats in inbox and select "Command...". You can do this for both generic commands, or commands specific to the selected chat.
+- Long-press / right-click any message and select "Command...". You can do this for generic commands, commands specific to the selected message, or commands specific to the chat you have currently open.
+- On desktop, commands that don't require a context can also be passed to an existing SchildiChat instance by invoking SchildiChat from the command line while passing the in-app command with the required parameters (e.g., `schildichat-revenge open inbox` to open a new window showing the room list).
+
+### How to know what commands exist?
+
+Allowing easy discovery for available commands is still on the TODO, so a complete list can currently only be found by [checking out the code](https://github.com/SchildiChat/schildi-revenge/blob/main/config/src/commonMain/kotlin/chat/schildi/revenge/config/keybindings/Action.kt).  
+While typing into the command input box, the app will suggest you commands with their required parameters, based on your current context and what you typed so far.
+The command input will furthermore before execution indicate commands that look correct with a green background, and commands that look malformed in red.
+
 ### What is Schildi taking "Revenge" for?
 
 If you need something specific here, go for the developer pain experienced from maintaining an Element Web fork :)  
